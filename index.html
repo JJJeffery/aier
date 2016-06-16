@@ -1,0 +1,392 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name="keywords" content="爱尔眼科,爱尔眼科医院,爱尔眼科东区首页" />
+    <meta name="discription" content="爱尔眼科东区首页" />
+    <meta name="author" content="Jeffery Li" />
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<title>爱尔眼科-东区首页</title>
+	<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/superslide.2.1.js"></script>
+<link rel="stylesheet" href="css/init.css" type="text/css"/>
+<link rel="stylesheet" href="css/index.css" type="text/css"/>
+
+</head>
+<body>
+    <!-- 顶部头信息 -->
+	<div class="header_top">
+		<div class="w1000 center">
+			<span class="text">中国IPO上市医疗机构 / 国内连锁眼科医院 / 成都市医保定点医院</span>
+			<div class="tell">
+			    <span class="bgc"></span>
+			    <span class="t">咨询热线 : </span><span class="n">028-8507-5888</span>
+			</div>
+		</div>
+	</div>
+	<!-- 顶部头信息 -->
+
+    <!-- LOGO及咨询平台 -->
+	<div class="header">
+		<div class="w1000 center">
+			<div class="logo">
+				<a href="http://www.eye028.com/"><img src="images/eye_09.gif" height="43" width="580" alt="爱尔眼科-东区首页" /></a>
+			</div>
+			<div class="sharf">
+			    <div class="consult">
+				    <span>官方咨询平台 : </span>
+				    <a href="/qq"><span class="qq"></span></a>
+				    <a href="/wechat"><span class="wechat"></span></a>
+				    <a href="/weibo"><span class="weibo"></span></a>
+			    </div>
+			    <div class="search">
+			    	<form action="">
+			    		<input type="text" name="q" class="search-keywords" id="search-keywords" maxlength="15" />
+			    		<button type="submit" class="search-submit"></button>
+			    	</form>
+			    </div>
+				
+			</div>
+		</div>
+	</div>
+	<!-- LOGO及咨询平台 -->
+ 
+    <!-- 菜单栏目 -->
+	<div class="menu">
+		<div class="w1000 center">
+			<ul class="menu-title">
+                <li><a href="index.html">爱尔首页</a></li>
+                <li><a href="" >关于爱尔</a></li>
+                <li><a href="" >患者服务</a></li>
+                <li><a href="" >专家团队</a></li>
+                <li><a href="" >公益慈善</a></li>
+                <li><a href="" >角膜捐献</a></li>
+            </ul>
+
+            <div class="drop-down">
+                <span class="ico"></span>
+            	<span class="text">诊疗项目</span>
+            	<div class="dd-menu">
+            		<ul>
+            			<a href="a"><li>近视手术</li></a>
+            			<a href="b"><li>白内障</li></a>
+            			<a href="c"><li>青光眼</li></a>
+            			<a href="d"><li>眼睛手术</li></a>
+            		</ul>
+            	</div>
+            </div>
+            <script type="text/javascript">
+                $(".dd-menu").hide();
+	            $(".drop-down").mouseover(function(){
+	                $(".dd-menu").show('fast');
+                })
+                $(".drop-down").mouseleave(function(){
+	                $(".dd-menu").hide();
+                })
+            </script>
+
+		</div>
+	</div>
+	<!-- 菜单栏目 -->
+
+    <!-- 大横幅图片轮播区域 -->
+	<div class="banner">
+	    <div class="fullSlide">
+	        <div class="bd">
+		        <ul>
+				    <li _src="url(images/11.jpg)" style="background:white center 0 no-repeat;"><a href="#"></a></li>
+				    <li _src="url(images/22.jpg)" style="background:white center 0 no-repeat;"><a href="#"></a></li>
+ 	                <li _src="url(images/33.jpg)" style="background:white center 0 no-repeat;"><a href="#"></a></li>
+				    <li _src="url(images/44.jpg)" style="background:white center 0 no-repeat;"><a href="#"></a></li>
+				</ul>
+	        </div>
+	        <div class="hd"><ul></ul></div>
+	        <span class="prev"></span>
+	        <span class="next"></span>
+        </div><!--fullSlide end-->
+        <script type="text/javascript">
+            $(".fullSlide").hover(function(){
+                $(this).find(".prev,.next").stop(true, true).fadeTo("show", 0.8)
+            },
+            function(){
+                $(this).find(".prev,.next").fadeOut()
+            });
+            $(".fullSlide").slide({
+                titCell: ".hd ul",
+                mainCell: ".bd ul",
+                effect: "fold",
+                autoPlay: true,
+                autoPage: true,
+                trigger: "click",
+                startFun: function(i) {
+                    var curLi = jQuery(".fullSlide .bd li").eq(i);
+                    if ( !! curLi.attr("_src")) {
+                        curLi.css("background-image", curLi.attr("_src")).removeAttr("_src")
+                    }
+                }
+            });
+        </script>
+	</div>
+	<!-- 大横幅图片轮播区域 -->
+
+    <!-- 小横幅图片轮播 -->
+	<div class="small_banner">
+		<div class="w1000 center">
+			<div class="smallSlide">
+				<div class="bd">
+					<ul>
+						<li _src="url(images/a.jpg)" style="background:#f4f9ff center 0 no-repeat;"><a href="#"></a></li>
+						<li _src="url(images/b.jpg)" style="background:#f4f9ff center 0 no-repeat;"><a href="#"></a></li>
+           				<li _src="url(images/c.jpg)" style="background:#f4f9ff center 0 no-repeat;"><a href="#"></a></li>
+						<li _src="url(images/d.jpg)" style="background:#f4f9ff center 0 no-repeat;"><a href="#"></a></li>
+			        </ul>
+	            </div>
+	            <div class="hd"><ul></ul></div>
+	            <span class="prev"></span>
+	            <span class="next"></span>
+			</div>
+			<script type="text/javascript">
+	            $(".smallSlide").slide({
+    	            titCell: ".hd ul",
+    	            mainCell: ".bd ul",
+    	            effect: "fold",
+    	            autoPlay: true,
+    	            autoPage: true,
+    	            trigger: "click",
+    	            startFun: function(i) {
+    	                var curLi = jQuery(".smallSlide .bd li").eq(i);
+    	                if ( !! curLi.attr("_src")) {
+    	                    curLi.css("background-image", curLi.attr("_src")).removeAttr("_src")
+    	                }
+   	                }
+	            });
+	        </script>
+		</div>
+	</div>
+	<!-- 小横幅图片轮播 -->
+
+    <!-- 爱尔眼科医院信息、挂号信息、医院动态 -->
+	<div class="information">
+		<div class="w1000 center">
+		    <!-- 医院信息 -->
+			<div class="info-intro">
+				<div class="info-box">
+					<img src="images/eye_44.gif" alt="上市集团" />
+					<p class="p1">上市集团</p>
+					<p>上市公司标准服务体系</p>
+				</div>
+				<div class="info-box">
+					<img src="images/eye_46.gif" alt="医学院背景" />
+					<p class="p1">医学院背景</p>
+					<p>成都医学院校院结合模式</p>
+				</div>
+				<div class="info-box">
+					<img src="images/eye_48.gif" alt="18年历史" />
+					<p class="p1">18年历史</p>
+					<p>累计服务百万患者</p>
+				</div>
+				<div class="info-box">
+					<img src="images/eye_50.gif" alt="先进设备" />
+					<p class="p1">先进设备</p>
+					<p>进口欧美设备/国际同步</p>
+				</div>
+				<div class="info-box">
+					<img src="images/eye_60.gif" alt="专家团队" />
+					<p class="p1">专家团队</p>
+					<p>美国/华西/专家领衔</p>
+				</div>
+				<div class="info-box">
+					<img src="images/eye_61.gif" alt="全国连锁" />
+					<p class="p1">全国连锁</p>
+					<p>规模化经营/异地复查</p>
+				</div>
+				<div class="info-box">
+					<img src="images/eye_62.gif" alt="公益慈善" />
+					<p class="p1">公益慈善</p>
+					<p>西部光明行/眼库/县域防盲</p>
+				</div>
+				<div class="info-box">
+					<img src="images/eye_63.gif" alt="公益慈善" />
+					<p class="p1">公益慈善</p>
+					<p>西部光明行/眼库/县域防盲</p>
+				</div>
+			</div>
+
+			<div class="info-news">
+			    <!-- 门诊时间及挂号排班信息 -->
+			    <div class="guahao">
+			    	<div class="guahao-time">
+			    		<span class="ico"></span>
+			    		<span class="text">门诊时间（无节假日） <span>8:30-17:30</span></span>
+			    	</div>
+
+			    	<div class="guahao-intro">
+			    	    <a href="">
+			    		    <div class="intro intro1">
+			    	    	    <span class="img img1"></span>
+			    	    	    <p>自助挂号</p>
+			    	        </div>
+			    	    </a>
+			    	    
+			    	    <a href=""><div class="intro intro2">
+			    	    	<span class="img img2"></span>
+			    	    	<p>医生排班</p>
+			    	    </div></a>
+			    	    <a href=""><div class="intro intro3">
+			    	    	<span class="img img3"></span>
+			    	    	<p>医保政策</p>
+			    	    </div></a>
+			    	    <a href=""><div class="intro intro4">
+			    	    	<span class="img img4"></span>
+			    	    	<p>就医流程</p>
+			    	    </div></a>
+			    		
+			    	</div>
+			    </div>
+
+                <!-- 医院动态 -->
+			    <div class="hospital-news">
+			        <div class="h-news">
+			        	<p class="c">医院动态</p>
+			            <p class="e">HOSPITAL NEWS</p>
+			    	    <a href=""><div class="news">
+			    		    <img src="images/eye_30.gif" alt="" />
+			    		    <div class="news-text">
+			    		    	<p class="t">西南首届高度近视专家见面会在我院圆满举行</p>
+			    		    	<p class="a">11月28日，西南首届高度近视专家见面会在我院圆满</p>
+			    		    </div>
+			    	    </div></a>
+
+			    	    <a href=""><div class="news">
+			    		    <img src="images/eye_38.gif" alt="" />
+			    		    <div class="news-text">
+			    		    	<p class="t">西南首届高度近视专家见面会在我院圆满举行</p>
+			    		    	<p class="a">11月28日，西南首届高度近视专家见面会在我院圆满</p>
+			    		    </div>
+			    	    </div></a>
+			        </div>
+
+			        <div class="t-news">
+			        	<p><a href=""><span class="cate">[医院动态]</span></a><a href=""><span class="art">&nbsp;世界读书日 我院助力全民“健康阅读”</span></a></p>
+			        	<p><a href=""><span class="cate">[教学科研]</span></a><a href=""><span class="art">&nbsp;西南首届高度近视专家见面会在我院圆</span></a></p>
+			        	<p><a href=""><span class="cate">[媒体公益]</span></a><a href=""><span class="art">&nbsp;胖叔叔“客串”爱眼课堂发言人</span></a></p>
+			        	<p><a href=""><span class="cate">[先进设备]</span></a><a href=""><span class="art">&nbsp;西南首届高度近视专家见面会在我院圆</span></a></p>
+			        	<p><a href=""><span class="cate">[爱尔视频]</span></a><a href=""><span class="art">&nbsp;保护眼睛从小抓起 专科医院村小做义诊</span></a></p>
+			        	<p><a href=""><span class="cate">[医院环境]</span></a><a href=""><span class="art">&nbsp;康桥眼科2015年继续医学教育学习班顺</span></a></p>
+			        </div>			    
+			    </div>
+
+			    <!-- 右侧咨询模块 -->
+	            <div class="right_module">
+            		<a href=""><div class="zjzx">
+			            <span></span>
+            			<p>专家咨询</p>
+		            </div></a>
+		            <a href=""><div class="zxzx">
+			            <span></span>
+		            	<p>在线咨询</p>
+            		</div></a>
+            		<a href=""><div class="lydh">
+		            	<span></span>
+            			<p>来院导航</p>
+            		</div></a>
+	            </div>
+	            <!-- 右侧咨询模块 -->			
+		    </div>
+		</div>
+	</div>
+	<!-- 爱尔眼科医院信息、挂号信息、医院动态 -->
+
+    <!-- 联系我们、附近医院、在线支付模块 -->
+	<div class="three_area">
+		<div class="w1000 center">
+			<div class="plate-info info1">
+				<p class="p1">QUICKLY HELP</p>
+				<p class="p2">EMERGENCY CASES</p>
+				<p class="p3">Lorem ipsum dolor sit amet, consectet uam porttitor, nunc et fringilla.</p>
+				<p class="p4"><a href="">CONTACT US NOW</a></p>
+			</div>
+			<div class="plate-info info2">
+				<p class="p1">IN YOUR COUNTRY</p>
+				<p class="p2">263 BRANCHES</p>
+				<p class="p3">Lorem ipsum dolor sit amet, consectet uam porttitor, nunc et fringilla.</p>
+				<p class="p4"><a href="">NEAREST LOCATION</a></p>
+			</div>
+			<div class="plate-info info3">
+				<p class="p1">SMOOTH AND EASY</p>
+				<p class="p2">ONLINE BILL PAYMENTS</p>
+				<p class="p3">Lorem ipsum dolor sit amet, consectet uam porttitor, nunc et fringilla.</p>
+				<p class="p4"><a href="">PAY YOUR BILL NOW</a></p>
+			</div>
+		</div>
+	</div>
+	<!-- 联系我们、附近医院、在线支付模块 -->
+
+	<!-- 底部 -->
+	<div class="footer">
+		<div class="w1000 center">
+		    <!-- 搜索框 -->
+			<div class="search">
+				<form action="" class="footer-form">
+					<input type="text" class="footer-keywords" name="k" placeholder="输入关键词"/><button type="submit" class="footer-submit">搜&nbsp;&nbsp;索</button>
+					<span class="ico"></span>
+				</form>
+			</div>
+
+            <div class="nav_con_code">
+            	<!-- 便捷导航 -->
+				<div class="easy-navigation">
+					<p class="common-title">便捷导航</p>
+					<div class="nav-text">
+						<ul>
+							<a href="index.html"><li>网站首页</li></a>
+							<a href=""><li>在线预约</li></a>
+							<a href=""><li>医院环境</li></a>
+							<a href=""><li>关于爱尔</li></a>
+							<a href=""><li>医保政策</li></a>
+							<a href=""><li>公益慈善</li></a>
+							<a href=""><li>诊疗项目</li></a>
+							<a href=""><li>就医流程</li></a>
+							<a href=""><li>连锁医院</li></a>
+							<a href=""><li>患者服务</li></a>
+							<a href=""><li>来院导航</li></a>
+							<a href=""><li>网站地图</li></a>
+							<a href=""><li>专家介绍</li></a>
+					    </ul>
+					</div>
+				</div>
+
+				<!-- 联系方式 -->
+				<div class="contact">
+					<p class="common-title con-title">联系方式</p>
+					<div class="con-text">
+						<span class="icon1"></span>
+						<span class="icon2"></span>
+						<span class="icon3"></span>
+						<p class="p1">免费咨询电话（7*365）</p>
+						<p class="p2">400-788-9900</p>
+						<p class="p1 p3">健康咨询热线（8:30-23:00）</p>
+						<p class="p2">028-8507 5888</p>
+						<p class="p1 p3">成都市成华区双林路388号</p>
+					</div>
+				</div>
+
+				<!-- 手机访问 -->
+				<div class="mobile">
+					<p class="common-title mo-title">手机访问</p>
+					<img src="images/eye_151.gif" alt="扫我有惊喜哦" />
+					<p class="mo-text">爱尔微世界 随时随地咨询</p>
+				</div>
+            </div>
+
+            <!-- 底部备案信息 -->
+            <div class="archival">
+            	<p class="p1">网站信息仅供参考，不能作为诊断及医疗的依据，就医请遵照医生诊断。</p>
+            	<p class="p2">COPYRIGHT&nbsp;&copy;&nbsp;2016&nbsp;www.aiereast.com&nbsp;ALL&nbsp;right&nbsp;Reserved&nbsp;&nbsp;蜀ICP备16010665号</p>
+            </div>
+            
+		</div>
+	</div>
+	<!-- 底部 -->
+</body>
+</html>
