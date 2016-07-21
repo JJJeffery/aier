@@ -22,9 +22,9 @@
 }
 
 .header_top .tell .bgc{
-	background: url("../images/eye_02.gif") no-repeat;
-	width: 25px;
-	height: 30px;
+	background: url("../images/tel.png") no-repeat;
+	width: 21px;
+	height: 32px;
 	position: absolute;
 	left: -25px;
 	top: 2px;
@@ -51,7 +51,6 @@
 }
 
 .header .logo{
-	cursor: pointer;
 	float: left;
 	padding-top: 28.5px;
 }
@@ -73,30 +72,39 @@
 }
 
 .header .sharf .consult .qq{
-	background: url("../images/eye_06.gif") no-repeat;
-	width: 30px;
-	height: 30px;
+	background: url("../images/sharp.png") no-repeat -2px 0px;
+	width: 23px;
+	height: 23px;
 	position: absolute;
-	top: 15px;
+	top: 20px;
 	left: 115px;
+}
+.header .sharf .consult .qq:hover{
+	background: url("../images/sharp_hover.png") no-repeat -2px 0px;
 }
 
 .header .sharf .consult .wechat{
-	background: url("../images/eye_06.gif") no-repeat -33px 0px;
-	width: 30px;
-	height: 30px;
+	background: url("../images/sharp.png") no-repeat -35px 0px;
+	width: 23px;
+	height: 23px;
 	position: absolute;
-	top: 15px;
+	top: 20px;
 	left: 145px;
+}
+.header .sharf .consult .wechat:hover{
+	background: url("../images/sharp_hover.png") no-repeat -35px 0px;
 }
 
 .header .sharf .consult .weibo{
-	background: url("../images/eye_06.gif") no-repeat -66px 0px;
-	width: 30px;
-	height: 30px;
+	background: url("../images/sharp.png") no-repeat -68px 0px;
+	width: 23px;
+	height: 23px;
 	position: absolute;
-	top: 15px;
+	top: 20px;
 	left: 175px;
+}
+.header .sharf .consult .weibo:hover{
+	background: url("../images/sharp_hover.png") no-repeat -68px 0px;
 }
 
 .header .sharf .search{
@@ -114,8 +122,8 @@
 }
 
 .header .sharf .search .search-submit{
-	background: url("../images/eye_13.gif") no-repeat;
-    width: 27px;
+	background: url("../images/header_search.png") no-repeat;
+    width: 19px;
     height: 22px;
     border: none;
     position: absolute;
@@ -169,11 +177,11 @@
 }
 
 .menu .drop-down .ico{
-	background: url("../images/eye_151.png") no-repeat;
-	width: 29px;
-	height: 28px;
+	background: url("../images/menu_01.png") no-repeat;
+	width: 26px;
+	height: 26px;
 	position: absolute;
-    top: 14px;
+    top: 15px;
     left: 20px;
 }
 
@@ -233,6 +241,10 @@
 .banner .fullSlide .bd li a{
 	display:block;
 	height:350px;
+}
+.banner .fullSlide .bd li img{
+	position: absolute;
+	top:0;
 }
 .banner .fullSlide .hd{
 	width:100%;
@@ -409,6 +421,14 @@
 	margin-right: 5px;
 	float: left;
 }
+.information .info-intro .info-box .img-box{
+	border: 1px solid #cccccc;
+	width: 114px;
+	height: 80px;
+	margin: 0 auto;
+	border-radius: 2px;
+}
+
 
 .information .info-intro .info-box p{
 	/*text-align: center;*/
@@ -456,9 +476,9 @@
     top: 14px;
     left: 30px;
     display: block;
-    width: 23px;
+    width: 21px;
     height: 23px;
-    background: url("../images/eye_20.gif") no-repeat;
+    background: url("../images/guahao_icon.png") no-repeat;
 }
 
 .information .info-news .guahao .guahao-time .text{
@@ -493,19 +513,19 @@
 }
 
 .information .info-news .guahao .guahao-intro .intro .img1{
-	background: url("../images/eye_01.jpg") no-repeat;
+	background: url("../images/gh_01.png") no-repeat;
 }
 
 .information .info-news .guahao .guahao-intro .intro .img2{
-	background: url("../images/eye_02.jpg") no-repeat;
+	background: url("../images/gh_02.png") no-repeat;
 }
 
 .information .info-news .guahao .guahao-intro .intro .img3{
-	background: url("../images/eye_03.jpg") no-repeat;
+	background: url("../images/gh_03.png") no-repeat;
 }
 
 .information .info-news .guahao .guahao-intro .intro .img4{
-	background: url("../images/eye_04.jpg") no-repeat;
+	background: url("../images/gh_04.png") no-repeat;
 }
 
 .information .info-news .guahao .guahao-intro .intro:hover{
@@ -513,19 +533,19 @@
 }
 
 .information .info-news .guahao .guahao-intro .intro:hover .img1{
-	background: url("../images/eye_04.jpg") no-repeat;
+	background: url("../images/gh_01_hover.png") no-repeat;
 }
 
 .information .info-news .guahao .guahao-intro .intro:hover .img2{
-	background: url("../images/eye_01.jpg") no-repeat;
+	background: url("../images/gh_02_hover.png") no-repeat;
 }
 
 .information .info-news .guahao .guahao-intro .intro:hover .img3{
-	background: url("../images/eye_01.jpg") no-repeat;
+	background: url("../images/gh_03_hover.png") no-repeat;
 }
 
 .information .info-news .guahao .guahao-intro .intro:hover .img4{
-	background: url("../images/eye_01.jpg") no-repeat;
+	background: url("../images/gh_04_hover.png") no-repeat;
 }
 /*门诊时间及挂号排班信息--结束*/
 
@@ -565,15 +585,22 @@
 	width: 170px;
 }
 
-.information .info-news .hospital-news .h-news .news .news-text .t{
+.information .info-news .hospital-news .h-news .news .news-text .n-t-t{
 	color: #033b93;
     font-weight: 600;
 }
 
-.information .info-news .hospital-news .h-news .news .news-text .a{
+.information .info-news .hospital-news .h-news .news .news-text .n-t-a{
 	margin-top: 20px;
     opacity: 0.5;
 }
+.information .info-news .hospital-news .h-news .news .news-text .n-t-a a{
+	color: blue;
+}
+.information .info-news .hospital-news .h-news .news .news-text .n-t-a a:hover{
+	text-decoration: underline;
+}
+
 
 .information .info-news .hospital-news .t-news{
 	width: 320px;
@@ -594,6 +621,9 @@
 .information .info-news .hospital-news .t-news .art{
 	color: white;
 	opacity: 0.8;
+}
+.information .info-news .hospital-news .t-news .art:hover{
+	text-decoration: underline;
 }
 /*医院动态--结束*/
 
@@ -616,12 +646,12 @@
 }
 
 .information .info-news .right_module .zjzx span{
-	background: url("../images/eye_33.gif") no-repeat;
-    width: 37px;
-    height: 37px;
+	background: url("../images/slide_01.png") no-repeat;
+    width: 40px;
+    height: 38px;
     position: absolute;
     top: 10px;
-    left: 23px;
+    left: 20px;
 }
 
 .information .info-news .right_module p{
@@ -639,12 +669,12 @@
 }
 
 .information .info-news .right_module .zxzx span{
-	background: url("../images/eye_42.gif") no-repeat;
-    width: 36px;
+	background: url("../images/slide_02.png") no-repeat;
+    width: 40px;
     height: 38px;
     position: absolute;
     top: 10px;
-    left: 23px;
+    left: 20px;
 }
 
 .information .info-news .right_module .lydh{
@@ -656,12 +686,12 @@
 }
 
 .information .info-news .right_module .lydh span{
-	background: url("../images/eye_58.gif") no-repeat;
-    width: 36px;
-    height: 31px;
+	background: url("../images/slide_03.png") no-repeat;
+    width: 40px;
+    height: 38px;
     position: absolute;
     top: 15px;
-    left: 23px;
+    left: 20px;
 }
 /*右侧咨询模块--结束*/
 
@@ -730,6 +760,548 @@
 }
 /*联系我们、附近医院、在线支付模块--结束*/
 
+/*诊疗项目--开始*/
+.clinic-project{
+	height: 660px;
+	width: 100%;
+	background: url("../images/clinic-project.jpg");
+	margin-top: 20px;
+}
+
+.clinic-project .clinic-title{
+	font-family: 宋体;
+	font-weight: bold;
+	text-align: center;
+	height:80px;
+}
+.clinic-project .clinic-title .p1{
+	font-size: 30px;
+	padding-top: 20px;
+	color: #ffffff;
+}
+.clinic-project .clinic-title .p2{
+	font-size: 12px;
+	padding-top: 5px;
+	letter-spacing: 2px;
+	color: #ffffff;
+}
+
+.clinic-project .clinic-scroll .clinic-catalog{
+	margin-top: 10px;
+	height:100px;
+}
+.clinic-project .clinic-scroll .cli-high{
+	float: left;
+	margin-left: 1px;
+	width:110px;
+	height:100px;
+	position: relative;
+}
+.clinic-project .clinic-scroll .cli-high:hover{
+	background-color: #1d65a6;
+	cursor: pointer;
+	border-radius: 5px;
+}
+.clinic-project .clinic-scroll .cli-high img{
+	margin-top: 11px;
+}
+.clinic-project .clinic-scroll .cli-high p{
+	text-align: center;
+	font-size: 14px;
+	color: white;
+}
+
+.clinic-project .clinic-scroll .cli-high span{
+	background: url("../images/hot.png") no-repeat;
+	position: absolute;
+	top: -7px;
+	right: -14px;
+	width: 28px;
+	height: 17px;
+}
+
+.clinic-project .clinic-scroll .clinic-category{
+	margin-top: 30px;
+	height:400px;
+	overflow: hidden;
+}
+
+.clinic-project .clinic-scroll .clinic-category .cli-content{
+	height:400px;
+}
+
+.clinic-project .clinic-scroll .clinic-category .cli-content .cli-con-left{
+	float: left;
+	width:400px;
+}
+
+.clinic-project .clinic-scroll .clinic-category .cli-content .cli-con-right{
+	float: right;
+	width:600px;
+	height:400px;
+	background-color: white;
+}
+.clinic-project .clinic-scroll .clinic-category .cli-content .cli-con-right .right-box{
+	padding: 44px 50px;
+}
+.clinic-project .clinic-scroll .clinic-category .cli-content .cli-con-right .right-box .c-t{
+	font-size: 24px;
+	font-weight: 500;
+	color: #404d60;
+}
+
+.clinic-project .clinic-scroll .clinic-category .cli-content .cli-con-right .right-box .c-c{
+	margin-top: 20px;
+	font-size: 14px;
+	line-height: 24px;
+	color: #647088;
+}
+
+.clinic-project .clinic-scroll .clinic-category .cli-content .cli-con-right .right-box .first{
+	margin-top: 10px;
+}
+.clinic-project .clinic-scroll .clinic-category .cli-content .cli-con-right .right-box .c-n{
+	line-height:30px;
+	color: #003493;
+	font-size: 14px;
+	position: relative;
+	padding-left: 15px;
+}
+
+.clinic-project .clinic-scroll .clinic-category .cli-content .cli-con-right .right-box .c-n span{
+	width:11px;
+	height:11px;
+	background: url("../images/point.png") no-repeat;
+	position: absolute;
+	left:0;
+	top:10px;
+}
+.clinic-project .clinic-scroll .clinic-category .cli-content .cli-con-right .right-box .c-n a{
+	color: #647088;
+}
+.clinic-project .clinic-scroll .clinic-category .cli-content .cli-con-right .right-box .c-n a:hover{
+	color: #003493;
+	text-decoration: underline;
+}
+
+.clinic-project .clinic-scroll .clinic-category .cli-content .cli-con-right .right-box .c-bottom{
+	background-color: #fe824c;
+	border-radius: 5px;
+	text-align: center;
+	width: 360px;
+	height: 40px;
+	margin-top: 20px;
+	padding: 0 5px;
+
+}
+
+.clinic-project .clinic-scroll .clinic-category .cli-content .cli-con-right .right-box .c-bottom .sp1{
+	font-size: 16px;
+	height:40px;
+	line-height: 40px;
+	color: #a32c00;
+	width:90px;
+	float: left;
+}
+
+.clinic-project .clinic-scroll .clinic-category .cli-content .cli-con-right .right-box .c-bottom .sp1:hover{
+	background-color: #dc5107;
+	cursor: pointer;
+	color: white;
+}
+/*诊疗项目--结束*/
+
+
+
+/*专家团队--开始*/
+.expert-team{
+	width:100%;
+	background-color: #ffffff;
+	height:600px;
+}
+.expert-team .expert-title{
+	font-family: 宋体;
+	font-weight: bold;
+	text-align: center;
+	height:80px;
+}
+.expert-team .expert-title .p1{
+	font-size: 30px;
+	padding-top: 20px;
+	color: #404D60;
+}
+.expert-team .expert-title .p2{
+	font-size: 12px;
+	padding-top: 5px;
+	letter-spacing: 3px;
+	color: #265500;
+}
+
+.expert-team .expert-description{
+	height:470px;
+	margin-top: 20px;
+}
+.expert-team .expert-content{
+	width:236px;
+	float: left;
+	margin: 0 7px;
+}
+.expert-team .expert-content .p-t{
+	font-size: 18px;
+	color: #3e4e5d;
+	font-weight: 600;
+	margin-top: 10px;
+	line-height: 36px;
+}
+.expert-team .expert-content .p-t span{
+	color: #003493;
+}
+.expert-team .expert-content .p-h{
+	font-size: 14px;
+	line-height:18px;
+	color: #0086d8;
+}
+
+.expert-team .expert-content .p-d{
+	margin-top: 20px;
+	color: #3e4e5d;
+	line-height: 24px;
+}
+
+.expert-team .expert-content .p-sharp{
+	position: relative;
+	border: 1px solid gray;
+	height:40px;
+	width:120px;
+	margin-top: 20px;
+}
+.expert-team .expert-content .p-sharp .wechat{
+	width:40px;
+	height:40px;
+	/*border: 1px solid gray;*/
+	position: absolute;
+	top:0;
+	left:0;
+	background: url("../images/expert_sharp.png") no-repeat;
+}
+.expert-team .expert-content .p-sharp .wechat:hover{
+	background: url("../images/expert_sharp_hover.png") no-repeat;
+}
+
+.expert-team .expert-content .p-sharp .msg{
+	width:40px;
+	height:40px;
+	border-left: 1px solid gray;
+	border-right: 1px solid gray;
+	position: absolute;
+	top:0;
+	left:40px;
+	background: url("../images/expert_sharp.png") no-repeat -40px 0px;
+}
+.expert-team .expert-content .p-sharp .msg:hover{
+	background: url("../images/expert_sharp_hover.png") no-repeat -40px 0px;
+}
+
+.expert-team .expert-content .p-sharp .xinxi{
+	width:40px;
+	height:40px;
+	position: absolute;
+	top:0;
+	left:80px;
+	background: url("../images/expert_sharp.png") no-repeat -80px 0px;
+}
+.expert-team .expert-content .p-sharp .xinxi:hover{
+	background: url("../images/expert_sharp_hover.png") no-repeat -80px 0px;
+}
+
+/*专家团队--结束*/
+
+/*诊疗设备--开始*/
+.equipment{
+	width:100%;
+	height:610px;
+	background-color: #edf6ff;
+}
+.equipment .equipment-title{
+	font-family: 宋体;
+	font-weight: bold;
+	text-align: center;
+	height:80px;
+}
+.equipment .equipment-title .p1{
+	font-size: 30px;
+	padding-top: 20px;
+	color: #404d60;
+}
+.equipment .equipment-title .p2{
+	font-size: 12px;
+	padding-top: 5px;
+	letter-spacing: 1px;
+	color: #265500;
+}
+.equipment .equipment-area{
+	height:530px;
+}
+
+/*左侧*/
+.equipment-left{
+	width:620px;
+	height:530px;
+	float: left;
+
+}
+.equipment-left .left-detail{
+	position: relative;
+
+}
+.equipment-left .left-detail .text-bg{
+	width: 470px;
+	height: 310px;
+	position: absolute;
+	left: 0;
+	top: 90px;
+	background-color: #404d5f;
+}
+.equipment-left .left-detail .text-bg .p-t{
+	margin-top: 30px;
+	font-size: 22px;
+	line-height: 36px;
+	color: #ffffff;
+	text-align: center;
+}
+
+.equipment-left .left-detail .text-bg .p-c{
+	margin-top: 20px;
+	font-size: 14px;
+	line-height: 28px;
+	color: #ffffff;
+	padding: 0 35px;
+	text-align: left;
+}
+
+.equipment-left .left-detail .text-bg .p-d{
+	width: 100px;
+	height: 35px;
+	line-height: 35px;
+	border-radius: 5px;
+	background-color: #fc8253;
+	display: block;
+	text-align: center;
+	color: white;
+	margin-left: 35px;
+	margin-top: 20px;
+}
+
+
+/*左侧轮播CSS*/
+.equipment-left .fullSlide{
+	width:620px;
+	position:relative;
+	height:530px;
+	/*background:#000;*/
+}
+.equipment-left .fullSlide .bd{
+	margin:0 auto;
+	position:relative;
+	z-index:0;
+	overflow:hidden;
+}
+.equipment-left .fullSlide .bd ul{
+	width:620px!important;
+}
+.equipment-left .fullSlide .bd li{
+	width:620px!important;
+	height:530px;
+	overflow:hidden;
+	text-align:center;
+}
+/*.full-scroll .fullSlide .bd li a{*/
+	/*display:block;*/
+	/*height:300px;*/
+/*}*/
+.equipment-left .fullSlide .hd{
+	width:620px;
+	position:absolute;
+	z-index:1;
+	bottom:50px;
+	left:30px;
+	height:20px;
+	line-height:20px;
+}
+.equipment-left .fullSlide .hd ul{
+	text-align:center;
+}
+.equipment-left .fullSlide .hd ul li{
+	cursor:pointer;
+	display:inline-block;
+	*display:inline;
+	zoom:1;
+	width:10px;
+	height:10px;
+	border-radius: 5px;
+	margin-left:5px;
+	margin-right:5px;
+	overflow:hidden;
+	background:#9facc0;
+	filter:alpha(opacity=50);
+	opacity:0.8;
+	line-height:999px;
+}
+.equipment-left .fullSlide .hd ul .on{
+	background:#6ebc1a;
+}
+.equipment-left .fullSlide .prev,.equipment-left .fullSlide .next{
+	display:block;
+	position:absolute;
+	z-index:1;
+	top:155px;
+	left:5px;
+	z-index:1;
+	width:41px;
+	height:41px;
+	border-radius: 4px;
+	background:url(../images/eye_152.png) 0px 0px no-repeat;
+	cursor:pointer;
+	filter:alpha(opacity=50);
+	opacity:0.8;
+	display:none;
+}
+.equipment-left .fullSlide .next{
+	left:auto;
+	right:5px;
+	background-position:-41px 0px;
+}
+.equipment-left .fullSlide .prev:hover{
+	background:url(../images/eye_153.png) 0px 0px no-repeat;
+}
+.equipment-left .fullSlide .next:hover{
+	background:url(../images/eye_153.png) -41px 0px no-repeat;
+}
+
+
+/*右侧*/
+.equipment-right{
+	width:350px;
+	height:530px;
+	float: right;
+}
+
+.equipment-right .right-detail{
+	width:350px;
+	height:110px;
+	border-radius: 5px;
+	background-color: #ffffff;
+	margin: 10px 0;
+}
+.equipment-right .right-detail .right-img{
+	width:135px;
+	height:110px;
+	border-radius: 5px 0px 0px 5px;
+	background-color: #cbdeec;
+	float: left;
+}
+.equipment-right .right-detail .right-text{
+	width:215px;
+	height:110px;
+	float: left;
+}
+.equipment-right .right-detail .right-text .r-t-t{
+	color: #003493;
+	font-size: 14px;
+	line-height:20px;
+	font-weight: 600;
+	padding: 10px;
+}
+.equipment-right .right-detail .right-text .r-t-c{
+	color: #3f4d60;
+	font-size: 12px;
+	line-height:20px;
+	padding: 0 10px 0 10px;
+}
+.equipment-right .right-detail .right-text .r-t-c a{
+	color: #6ebc1a;
+}
+.equipment-right .right-detail .right-text .r-t-c a:hover{
+	text-decoration: underline;
+}
+
+
+
+/*诊疗设备--结束*/
+
+
+/*院内环境--开始*/
+.environment{
+	width:100%;
+	background-color: #ffffff;
+	height:520px;
+	margin-top: 30px;
+}
+.environment .environment-title{
+	font-family: 宋体;
+	font-weight: bold;
+	text-align: center;
+	height:80px;
+}
+.environment .environment-title .p1{
+	font-size: 30px;
+	padding-top: 20px;
+	color: #404d60;
+}
+.environment .environment-title .p2{
+	font-size: 12px;
+	padding-top: 5px;
+	letter-spacing: 1px;
+	color: #265500;
+}
+
+.environment .environment-content{
+	margin-top: 20px;
+	height:435px;
+}
+
+.environment .environment-content .ec-left{
+	float: left;
+	width:480px;
+}
+
+.environment .environment-content .ec-text{
+	position: relative;
+	font-size: 18px;
+	line-height: 40px;
+	color: #404d60;
+	padding-left: 20px;
+}
+.environment .environment-content .ec-text span{
+	width:11px;
+	height:11px;
+	position: absolute;
+	top:16px;
+	left:0;
+	background: url("../images/point.png") no-repeat;
+}
+.environment .environment-content .ec-right{
+	float: right;
+	width:480px;
+}
+.environment .environment-content .ec-right .ec-right-one{
+	width:480px;
+	height:195px;
+}
+.environment .environment-content .ec-right .ec-right-two{
+	width:480px;
+	height:195px;
+	margin-top: 40px;
+}
+.environment .environment-content .ec-right .ec-right-d{
+	float: left;
+}
+.environment .environment-content .ec-right .first{
+	margin-right: 40px;
+}
+
+/*院内环境--结束*/
+
 
 /*底部信息--开始*/
 .footer{
@@ -761,7 +1333,7 @@
     width: 230px;
     padding-left: 31px;
     background-color: #41516a;
-    
+	color: white;
 }
 
 .footer .search .footer-submit{
@@ -778,12 +1350,12 @@
 }
 
 .footer .search .ico{
-	width: 25px;
-    height: 29px;
-    background: url("../images/eye_144.gif");
+	width: 24px;
+    height: 25px;
+    background: url("../images/footer_search.png");
     position: absolute;
     left: 6px;
-    top: 6px;
+    top: 9px;
 }
 
 .footer .nav_con_code{
@@ -831,12 +1403,13 @@
 .footer .nav_con_code .contact .con-text{
 	border-left: 1px solid #212c3e;
     border-right: 1px solid #212c3e;
-    position: relative;
+
     padding-left: 70px;
     height: 200px;
 }
 
 .footer .nav_con_code .contact .con-text .p1{
+	position: relative;
 	color: #506eac;
     font-size: 15px;
     opacity: 0.8;
@@ -858,27 +1431,30 @@
 }
 
 .footer .nav_con_code .contact .con-text .icon1{
-	width: 30px;
-	height: 40px;
-	background: url("../images/eye_148.png") -10px -5px no-repeat;
+	width: 26px;
+	height: 30px;
+	background: url("../images/footer_ico.png") 0px 0px no-repeat;
 	position: absolute;
 	top: 0px;
+	left: 0px;
 }
 
 .footer .nav_con_code .contact .con-text .icon2{
-	width: 30px;
-	height: 40px;
-	background: url("../images/eye_148.png") -10px -73px no-repeat;
+	width: 26px;
+	height: 30px;
+	background: url("../images/footer_ico.png") 0px -30px no-repeat;
 	position: absolute;
-	top: 79px;
+	top: 0px;
+	left: 0px;
 }
 
 .footer .nav_con_code .contact .con-text .icon3{
-	width: 30px;
-	height: 40px;
-	background: url("../images/eye_148.png") -10px -145px no-repeat;
+	width: 26px;
+	height: 30px;
+	background: url("../images/footer_ico.png") 0px -60px no-repeat;
 	position: absolute;
-	top: 157px;
+	bottom: -5px;
+	left: 0px;
 }
 
 /*手机访问*/

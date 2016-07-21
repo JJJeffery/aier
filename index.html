@@ -6,7 +6,7 @@
     <meta name="discription" content="爱尔眼科东区首页" />
     <meta name="author" content="Jeffery Li" />
 	<link rel="shortcut icon" href="images/favicon.ico">
-	<title>爱尔眼科-东区首页</title>
+	<title>成都东区爱尔眼科医院</title>
 	<script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/superslide.2.1.js"></script>
 <link rel="stylesheet" href="css/init.css" type="text/css"/>
@@ -30,7 +30,7 @@
 	<div class="header">
 		<div class="w1000 center">
 			<div class="logo">
-				<a href="http://www.eye028.com/"><img src="images/eye_09.gif" height="43" width="580" alt="爱尔眼科-东区首页" /></a>
+				<a href="http://www.eye028.com/"><img src="images/web-logo.png" height="44" width="582" alt="爱尔眼科-东区首页" /></a>
 			</div>
 			<div class="sharf">
 			    <div class="consult">
@@ -40,7 +40,7 @@
 				    <a href="/weibo"><span class="weibo"></span></a>
 			    </div>
 			    <div class="search">
-			    	<form action="">
+			    	<form name="formsearch" action="/plus/search.php">
 			    		<input type="text" name="q" class="search-keywords" id="search-keywords" maxlength="15" />
 			    		<button type="submit" class="search-submit"></button>
 			    	</form>
@@ -78,10 +78,10 @@
             <script type="text/javascript">
                 $(".dd-menu").hide();
 	            $(".drop-down").mouseover(function(){
-	                $(".dd-menu").show('fast');
+	                $(".dd-menu").fadeIn('fast');
                 })
                 $(".drop-down").mouseleave(function(){
-	                $(".dd-menu").hide();
+	                $(".dd-menu").fadeOut('fast');
                 })
             </script>
 
@@ -94,10 +94,10 @@
 	    <div class="fullSlide">
 	        <div class="bd">
 		        <ul>
-				    <li _src="url(images/11.jpg)" style="background:white center 0 no-repeat;"><a href="#"></a></li>
-				    <li _src="url(images/22.jpg)" style="background:white center 0 no-repeat;"><a href="#"></a></li>
- 	                <li _src="url(images/33.jpg)" style="background:white center 0 no-repeat;"><a href="#"></a></li>
-				    <li _src="url(images/44.jpg)" style="background:white center 0 no-repeat;"><a href="#"></a></li>
+				    <li><a href="/a"><img src="images/11.jpg" alt=""/></a></li>
+				    <li><a href="/b"><img src="images/22.jpg" alt=""/></a></li>
+ 	                <li><a href="/c"><img src="images/33.jpg" alt=""/></a></li>
+				    <li><a href="/d"><img src="images/44.jpg" alt=""/></a></li>
 				</ul>
 	        </div>
 	        <div class="hd"><ul></ul></div>
@@ -105,26 +105,52 @@
 	        <span class="next"></span>
         </div><!--fullSlide end-->
         <script type="text/javascript">
-            $(".fullSlide").hover(function(){
-                $(this).find(".prev,.next").stop(true, true).fadeTo("show", 0.8)
-            },
-            function(){
-                $(this).find(".prev,.next").fadeOut()
-            });
-            $(".fullSlide").slide({
-                titCell: ".hd ul",
-                mainCell: ".bd ul",
-                effect: "fold",
-                autoPlay: true,
-                autoPage: true,
-                trigger: "click",
-                startFun: function(i) {
-                    var curLi = jQuery(".fullSlide .bd li").eq(i);
-                    if ( !! curLi.attr("_src")) {
-                        curLi.css("background-image", curLi.attr("_src")).removeAttr("_src")
-                    }
-                }
-            });
+			// 指定箭头到中间位置
+			var imgHeight = $(".banner .fullSlide").height();
+			var arrowHeight = $(".banner .fullSlide .prev").height();
+			var arrowTop = (imgHeight - arrowHeight)/2 + 'px';
+			$(".banner .fullSlide .prev").css("top",arrowTop);
+			$(".banner .fullSlide .next").css("top",arrowTop);
+
+			// 底部小点自动居中
+			var winWidth = $(window).width();
+			var imgTotal = $(".banner .fullSlide .bd ul li a img").length;
+			var hdWidth = imgTotal*20;
+			var hdLeft = (winWidth - hdWidth)/2;
+			$(".banner .fullSlide .hd").css("width",hdWidth+'px');
+			$(".banner .fullSlide .hd").css("left",hdLeft+'px');
+
+            // 图片宽度 > 窗口宽度时，对图片进行居中显示
+            var imgWidth = $(".banner .fullSlide .bd ul li img").width();
+            if(imgWidth>winWidth){
+            	var imgLeft = (imgWidth - winWidth)/2;
+            	$(".banner .fullSlide .bd img").css("left",'-'+imgLeft+'px');
+            }
+
+			// 只有一张图片，不显示底部圆点和左右箭头
+			if(imgTotal == 1){
+				$(".banner .fullSlide .hd").css("display","none");
+				$(".banner .fullSlide").hover(function(){
+					$(this).find(".prev,.next").css("display","none")
+				});
+			}else{
+				// 鼠标在图片上时才显示左右箭头
+				$(".banner .fullSlide").hover(function(){
+							$(this).find(".prev,.next").stop(true, true).fadeTo("show", 0.8)
+						},
+						function(){
+							$(this).find(".prev,.next").fadeOut()
+						});
+			}
+
+			$(".banner .fullSlide").slide({
+				titCell: ".hd ul",
+				mainCell: ".bd ul",
+				effect: "fold",
+				autoPlay: true,
+				autoPage: true,
+				trigger: "click",
+			});
         </script>
 	</div>
 	<!-- 大横幅图片轮播区域 -->
@@ -135,10 +161,10 @@
 			<div class="smallSlide">
 				<div class="bd">
 					<ul>
-						<li _src="url(images/a.jpg)" style="background:#f4f9ff center 0 no-repeat;"><a href="#"></a></li>
-						<li _src="url(images/b.jpg)" style="background:#f4f9ff center 0 no-repeat;"><a href="#"></a></li>
-           				<li _src="url(images/c.jpg)" style="background:#f4f9ff center 0 no-repeat;"><a href="#"></a></li>
-						<li _src="url(images/d.jpg)" style="background:#f4f9ff center 0 no-repeat;"><a href="#"></a></li>
+						<li><a href="/a" title=""><img src="images/a.jpg" alt="" /></a></li>
+						<li><a href="/i" title=""><img src="images/b.jpg" alt="" /></a></li>
+           				<li><a href="/m" title=""><img src="images/c.jpg" alt="" /></a></li>
+						<li><a href="/o" title=""><img src="images/d.jpg" alt="" /></a></li>
 			        </ul>
 	            </div>
 	            <div class="hd"><ul></ul></div>
@@ -152,13 +178,7 @@
     	            effect: "fold",
     	            autoPlay: true,
     	            autoPage: true,
-    	            trigger: "click",
-    	            startFun: function(i) {
-    	                var curLi = jQuery(".smallSlide .bd li").eq(i);
-    	                if ( !! curLi.attr("_src")) {
-    	                    curLi.css("background-image", curLi.attr("_src")).removeAttr("_src")
-    	                }
-   	                }
+    	            trigger: "click"
 	            });
 	        </script>
 		</div>
@@ -171,42 +191,58 @@
 		    <!-- 医院信息 -->
 			<div class="info-intro">
 				<div class="info-box">
-					<img src="images/eye_44.gif" alt="上市集团" />
+					<div class="img-box">
+						<img src="images/info_01.png" alt="上市集团" />
+					</div>
 					<p class="p1">上市集团</p>
 					<p>上市公司标准服务体系</p>
 				</div>
 				<div class="info-box">
-					<img src="images/eye_46.gif" alt="医学院背景" />
+					<div class="img-box">
+						<img src="images/info_02.png" alt="医学院背景" />
+					</div>
 					<p class="p1">医学院背景</p>
 					<p>成都医学院校院结合模式</p>
 				</div>
 				<div class="info-box">
-					<img src="images/eye_48.gif" alt="18年历史" />
+					<div class="img-box">
+						<img src="images/info_03.png" alt="18年历史" />
+					</div>
 					<p class="p1">18年历史</p>
 					<p>累计服务百万患者</p>
 				</div>
 				<div class="info-box">
-					<img src="images/eye_50.gif" alt="先进设备" />
+					<div class="img-box">
+						<img src="images/info_04.png" alt="先进设备" />
+					</div>
 					<p class="p1">先进设备</p>
 					<p>进口欧美设备/国际同步</p>
 				</div>
 				<div class="info-box">
-					<img src="images/eye_60.gif" alt="专家团队" />
+					<div class="img-box">
+						<img src="images/info_05.png" alt="专家团队" />
+					</div>
 					<p class="p1">专家团队</p>
 					<p>美国/华西/专家领衔</p>
 				</div>
 				<div class="info-box">
-					<img src="images/eye_61.gif" alt="全国连锁" />
+					<div class="img-box">
+						<img src="images/info_06.png" alt="全国连锁" />
+					</div>
 					<p class="p1">全国连锁</p>
 					<p>规模化经营/异地复查</p>
 				</div>
 				<div class="info-box">
-					<img src="images/eye_62.gif" alt="公益慈善" />
+					<div class="img-box">
+						<img src="images/info_07.png" alt="公益慈善" />
+					</div>
 					<p class="p1">公益慈善</p>
 					<p>西部光明行/眼库/县域防盲</p>
 				</div>
 				<div class="info-box">
-					<img src="images/eye_63.gif" alt="公益慈善" />
+					<div class="img-box">
+						<img src="images/info_07.png" alt="公益慈善" />
+					</div>
 					<p class="p1">公益慈善</p>
 					<p>西部光明行/眼库/县域防盲</p>
 				</div>
@@ -249,30 +285,30 @@
 			        <div class="h-news">
 			        	<p class="c">医院动态</p>
 			            <p class="e">HOSPITAL NEWS</p>
-			    	    <a href=""><div class="news">
-			    		    <img src="images/eye_30.gif" alt="" />
+			    	    <div class="news">
+							<a href=""><img src="images/eye_30.gif" alt="" /></a>
 			    		    <div class="news-text">
-			    		    	<p class="t">西南首届高度近视专家见面会在我院圆满举行</p>
-			    		    	<p class="a">11月28日，西南首届高度近视专家见面会在我院圆满</p>
+								<a href=""><p class="n-t-t">西南首届高度近视专家见面会在我院圆满举行</p></a>
+			    		    	<p class="n-t-a">11月28日，西南首届高度近视专家见面会在我<a href="">[详细]</a></p>
 			    		    </div>
-			    	    </div></a>
+			    	    </div>
 
-			    	    <a href=""><div class="news">
-			    		    <img src="images/eye_38.gif" alt="" />
-			    		    <div class="news-text">
-			    		    	<p class="t">西南首届高度近视专家见面会在我院圆满举行</p>
-			    		    	<p class="a">11月28日，西南首届高度近视专家见面会在我院圆满</p>
-			    		    </div>
-			    	    </div></a>
+			    	    <div class="news">
+							<a href=""><img src="images/eye_38.gif" alt="" /></a>
+							<div class="news-text">
+								<a href=""><p class="n-t-t">西南首届高度近视专家见面会在我院圆满举行</p></a>
+								<p class="n-t-a">11月28日，西南首届高度近视专家见面会在我<a href="">[详细]</a></p>
+							</div>
+			    	    </div>
 			        </div>
 
 			        <div class="t-news">
-			        	<p><a href=""><span class="cate">[医院动态]</span></a><a href=""><span class="art">&nbsp;世界读书日 我院助力全民“健康阅读”</span></a></p>
-			        	<p><a href=""><span class="cate">[教学科研]</span></a><a href=""><span class="art">&nbsp;西南首届高度近视专家见面会在我院圆</span></a></p>
-			        	<p><a href=""><span class="cate">[媒体公益]</span></a><a href=""><span class="art">&nbsp;胖叔叔“客串”爱眼课堂发言人</span></a></p>
-			        	<p><a href=""><span class="cate">[先进设备]</span></a><a href=""><span class="art">&nbsp;西南首届高度近视专家见面会在我院圆</span></a></p>
-			        	<p><a href=""><span class="cate">[爱尔视频]</span></a><a href=""><span class="art">&nbsp;保护眼睛从小抓起 专科医院村小做义诊</span></a></p>
-			        	<p><a href=""><span class="cate">[医院环境]</span></a><a href=""><span class="art">&nbsp;康桥眼科2015年继续医学教育学习班顺</span></a></p>
+			        	<p><span class="cate">[医院动态]&nbsp;</span><a href=""><span class="art">世界读书日 我院助力全民“健康阅读”</span></a></p>
+			        	<p><span class="cate">[教学科研]&nbsp;</span><a href=""><span class="art">西南首届高度近视专家见面会在我院圆</span></a></p>
+			        	<p><span class="cate">[媒体公益]&nbsp;</span><a href=""><span class="art">胖叔叔“客串”爱眼课堂发言人</span></a></p>
+			        	<p><span class="cate">[先进设备]&nbsp;</span><a href=""><span class="art">西南首届高度近视专家见面会在我院圆</span></a></p>
+			        	<p><span class="cate">[爱尔视频]&nbsp;</span><a href=""><span class="art">保护眼睛从小抓起 专科医院村小做义诊</span></a></p>
+			        	<p><span class="cate">[医院环境]&nbsp;</span><a href=""><span class="art">康桥眼科2015年继续医学教育学习班顺</span></a></p>
 			        </div>			    
 			    </div>
 
@@ -322,6 +358,498 @@
 	</div>
 	<!-- 联系我们、附近医院、在线支付模块 -->
 
+	<!--诊疗项目模块--开始-->
+	<div class="clinic-project">
+		<div class="w1000 center">
+			<div class="clinic-title">
+				<p class="p1">诊疗项目</p>
+				<p class="p2">CLINIC PROJECT</p>
+			</div>
+			<!--轮播项目-->
+			<div class="clinic-scroll">
+				<div class="clinic-catalog">
+					<div class="cli-high">
+						<img src="images/clinic-ico1.png" width="110" height="53">
+						<p>白内障手术</p>
+						<!--<span></span> &lt;!&ndash;右上角hot图标&ndash;&gt;-->
+					</div>
+					<div class="cli-high">
+						<img src="images/clinic-ico2.png" width="110" height="53">
+						<p>斜弱视及小儿</p>
+						<span></span>
+					</div>
+					<div class="cli-high">
+						<img src="images/clinic-ico3.png" width="110" height="53">
+						<p>近视手术</p>
+						<span></span>
+					</div>
+					<div class="cli-high">
+						<img src="images/clinic-ico4.png" width="110" height="53">
+						<p>眼底病</p>
+						<span></span>
+					</div>
+					<div class="cli-high">
+						<img src="images/clinic-ico5.png" width="110" height="53">
+						<p>视光</p>
+						<span></span>
+					</div>
+					<div class="cli-high">
+						<img src="images/clinic-ico6.png" width="110" height="53">
+						<p>青光眼</p>
+						<span></span>
+					</div>
+					<div class="cli-high">
+						<img src="images/clinic-ico7.png" width="110" height="53">
+						<p>眼底病</p>
+						<span></span>
+					</div>
+					<div class="cli-high">
+						<img src="images/clinic-ico8.png" width="110" height="53">
+						<p>眼底病</p>
+						<span></span>
+					</div>
+					<div class="cli-high">
+						<img src="images/clinic-ico9.png" width="110" height="53">
+						<p>泪道病</p>
+						<span></span>
+					</div>
+				</div>
+
+				<div class="clinic-category">
+					<div class="cli-content">
+						<div class="cli-con-left"><img src="images/cli-con-img.png" width="400" height="400"></div>
+						<div class="cli-con-right">
+							<div class="right-box">
+								<p class="c-t">近视手术专科</p>
+								<p class="c-c">近视手术专科是爱尔眼科重点高新技术项目，2005年，率先在中国引进飞秒激光技术并成功实施国内第一例飞秒手术。迄今为止，近视手术专科已成功开展近视手术120余万例。</p>
+								<p class="c-n first"><span></span>[治疗]&nbsp;&nbsp;<a href="">近视的治疗方法有哪些</a></p>
+								<p class="c-n"><span></span>[最新活动]&nbsp;&nbsp;<a href="">名医集结衣冠庙 我正在抢红包</a></p>
+								<p class="c-n"><span></span>[行业动态]&nbsp;&nbsp;<a href="">2050高度近视将达到9亿 如何</a></p>
+								<p class="c-n"><span></span>[治疗]&nbsp;&nbsp;<a href="">近视的治疗方法有哪些</a></p>
+								<div class="c-bottom">
+									<a href=""><div class="sp1">诊疗设备</div></a>
+									<a href=""><div class="sp1">专家团队</div></a>
+									<a href=""><div class="sp1">先进技术</div></a>
+									<a href=""><div class="sp1">个性服务</div></a>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cli-content">
+						<div class="cli-con-left"><img src="images/cli-con-img.png" width="400" height="400"></div>
+						<div class="cli-con-right">
+							<div class="right-box">
+								<p class="c-t">斜弱视及小儿</p>
+								<p class="c-c">斜弱视及小儿专科是爱尔眼科重点高新技术项目，2005年，率先在中国引进飞秒激光技术并成功实施国内第一例飞秒手术。迄今为止，近视手术专科已成功开展近视手术120余万例。</p>
+								<p class="c-n first"><span></span>[治疗]&nbsp;&nbsp;<a href="">近视的治疗方法有哪些</a></p>
+								<p class="c-n"><span></span>[最新活动]&nbsp;&nbsp;<a href="">名医集结衣冠庙 我正在抢红包</a></p>
+								<p class="c-n"><span></span>[行业动态]&nbsp;&nbsp;<a href="">2050高度近视将达到9亿 如何</a></p>
+								<p class="c-n"><span></span>[治疗]&nbsp;&nbsp;<a href="">近视的治疗方法有哪些</a></p>
+								<div class="c-bottom">
+									<a href=""><div class="sp1">诊疗设备</div></a>
+									<a href=""><div class="sp1">专家团队</div></a>
+									<a href=""><div class="sp1">先进技术</div></a>
+									<a href=""><div class="sp1">个性服务</div></a>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cli-content">
+						<div class="cli-con-left"><img src="images/cli-con-img.png" width="400" height="400"></div>
+						<div class="cli-con-right">
+							<div class="right-box">
+								<p class="c-t">近视手术</p>
+								<p class="c-c">近视手术专科是爱尔眼科重点高新技术项目，2005年，率先在中国引进飞秒激光技术并成功实施国内第一例飞秒手术。迄今为止，近视手术专科已成功开展近视手术120余万例。</p>
+								<p class="c-n first"><span></span>[治疗]&nbsp;&nbsp;<a href="">近视的治疗方法有哪些</a></p>
+								<p class="c-n"><span></span>[最新活动]&nbsp;&nbsp;<a href="">名医集结衣冠庙 我正在抢红包</a></p>
+								<p class="c-n"><span></span>[行业动态]&nbsp;&nbsp;<a href="">2050高度近视将达到9亿 如何</a></p>
+								<p class="c-n"><span></span>[治疗]&nbsp;&nbsp;<a href="">近视的治疗方法有哪些</a></p>
+								<div class="c-bottom">
+									<a href=""><div class="sp1">诊疗设备</div></a>
+									<a href=""><div class="sp1">专家团队</div></a>
+									<a href=""><div class="sp1">先进技术</div></a>
+									<a href=""><div class="sp1">个性服务</div></a>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cli-content">
+						<div class="cli-con-left"><img src="images/cli-con-img.png" width="400" height="400"></div>
+						<div class="cli-con-right">
+							<div class="right-box">
+								<p class="c-t">屈光手术</p>
+								<p class="c-c">屈光手术专科是爱尔眼科重点高新技术项目，2005年，率先在中国引进飞秒激光技术并成功实施国内第一例飞秒手术。迄今为止，近视手术专科已成功开展近视手术120余万例。</p>
+								<p class="c-n first"><span></span>[治疗]&nbsp;&nbsp;<a href="">近视的治疗方法有哪些</a></p>
+								<p class="c-n"><span></span>[最新活动]&nbsp;&nbsp;<a href="">名医集结衣冠庙 我正在抢红包</a></p>
+								<p class="c-n"><span></span>[行业动态]&nbsp;&nbsp;<a href="">2050高度近视将达到9亿 如何</a></p>
+								<p class="c-n"><span></span>[治疗]&nbsp;&nbsp;<a href="">近视的治疗方法有哪些</a></p>
+								<div class="c-bottom">
+									<a href=""><div class="sp1">诊疗设备</div></a>
+									<a href=""><div class="sp1">专家团队</div></a>
+									<a href=""><div class="sp1">先进技术</div></a>
+									<a href=""><div class="sp1">个性服务</div></a>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cli-content">
+						<div class="cli-con-left"><img src="images/cli-con-img.png" width="400" height="400"></div>
+						<div class="cli-con-right">
+							<div class="right-box">
+								<p class="c-t">视光科</p>
+								<p class="c-c">视光科是爱尔眼科重点高新技术项目，2005年，率先在中国引进飞秒激光技术并成功实施国内第一例飞秒手术。迄今为止，近视手术专科已成功开展近视手术120余万例。</p>
+								<p class="c-n first"><span></span>[治疗]&nbsp;&nbsp;<a href="">近视的治疗方法有哪些</a></p>
+								<p class="c-n"><span></span>[最新活动]&nbsp;&nbsp;<a href="">名医集结衣冠庙 我正在抢红包</a></p>
+								<p class="c-n"><span></span>[行业动态]&nbsp;&nbsp;<a href="">2050高度近视将达到9亿 如何</a></p>
+								<p class="c-n"><span></span>[治疗]&nbsp;&nbsp;<a href="">近视的治疗方法有哪些</a></p>
+								<div class="c-bottom">
+									<a href=""><div class="sp1">诊疗设备</div></a>
+									<a href=""><div class="sp1">专家团队</div></a>
+									<a href=""><div class="sp1">先进技术</div></a>
+									<a href=""><div class="sp1">个性服务</div></a>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cli-content">
+						<div class="cli-con-left"><img src="images/cli-con-img.png" width="400" height="400"></div>
+						<div class="cli-con-right">
+							<div class="right-box">
+								<p class="c-t">青光眼</p>
+								<p class="c-c">青光眼专科是爱尔眼科重点高新技术项目，2005年，率先在中国引进飞秒激光技术并成功实施国内第一例飞秒手术。迄今为止，近视手术专科已成功开展近视手术120余万例。</p>
+								<p class="c-n first"><span></span>[治疗]&nbsp;&nbsp;<a href="">近视的治疗方法有哪些</a></p>
+								<p class="c-n"><span></span>[最新活动]&nbsp;&nbsp;<a href="">名医集结衣冠庙 我正在抢红包</a></p>
+								<p class="c-n"><span></span>[行业动态]&nbsp;&nbsp;<a href="">2050高度近视将达到9亿 如何</a></p>
+								<p class="c-n"><span></span>[治疗]&nbsp;&nbsp;<a href="">近视的治疗方法有哪些</a></p>
+								<div class="c-bottom">
+									<a href=""><div class="sp1">诊疗设备</div></a>
+									<a href=""><div class="sp1">专家团队</div></a>
+									<a href=""><div class="sp1">先进技术</div></a>
+									<a href=""><div class="sp1">个性服务</div></a>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cli-content">
+						<div class="cli-con-left"><img src="images/cli-con-img.png" width="400" height="400"></div>
+						<div class="cli-con-right">
+							<div class="right-box">
+								<p class="c-t">眼底病</p>
+								<p class="c-c">眼底病专科是爱尔眼科重点高新技术项目，2005年，率先在中国引进飞秒激光技术并成功实施国内第一例飞秒手术。迄今为止，近视手术专科已成功开展近视手术120余万例。</p>
+								<p class="c-n first"><span></span>[治疗]&nbsp;&nbsp;<a href="">近视的治疗方法有哪些</a></p>
+								<p class="c-n"><span></span>[最新活动]&nbsp;&nbsp;<a href="">名医集结衣冠庙 我正在抢红包</a></p>
+								<p class="c-n"><span></span>[行业动态]&nbsp;&nbsp;<a href="">2050高度近视将达到9亿 如何</a></p>
+								<p class="c-n"><span></span>[治疗]&nbsp;&nbsp;<a href="">近视的治疗方法有哪些</a></p>
+								<div class="c-bottom">
+									<a href=""><div class="sp1">诊疗设备</div></a>
+									<a href=""><div class="sp1">专家团队</div></a>
+									<a href=""><div class="sp1">先进技术</div></a>
+									<a href=""><div class="sp1">个性服务</div></a>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cli-content">
+						<div class="cli-con-left"><img src="images/cli-con-img.png" width="400" height="400"></div>
+						<div class="cli-con-right">
+							<div class="right-box">
+								<p class="c-t">东区医院</p>
+								<p class="c-c">白内障手术专科是爱尔眼科重点高新技术项目，2005年，率先在中国引进飞秒激光技术并成功实施国内第一例飞秒手术。迄今为止，近视手术专科已成功开展近视手术120余万例。</p>
+								<p class="c-n first"><span></span>[治疗]&nbsp;&nbsp;<a href="">近视的治疗方法有哪些</a></p>
+								<p class="c-n"><span></span>[最新活动]&nbsp;&nbsp;<a href="">名医集结衣冠庙 我正在抢红包</a></p>
+								<p class="c-n"><span></span>[行业动态]&nbsp;&nbsp;<a href="">2050高度近视将达到9亿 如何</a></p>
+								<p class="c-n"><span></span>[治疗]&nbsp;&nbsp;<a href="">近视的治疗方法有哪些</a></p>
+								<div class="c-bottom">
+									<a href=""><div class="sp1">诊疗设备</div></a>
+									<a href=""><div class="sp1">专家团队</div></a>
+									<a href=""><div class="sp1">先进技术</div></a>
+									<a href=""><div class="sp1">个性服务</div></a>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cli-content">
+						<div class="cli-con-left"><img src="images/cli-con-img.png" width="400" height="400"></div>
+						<div class="cli-con-right">
+							<div class="right-box">
+								<p class="c-t">泪道病</p>
+								<p class="c-c">泪道病专科是爱尔眼科重点高新技术项目，2005年，率先在中国引进飞秒激光技术并成功实施国内第一例飞秒手术。迄今为止，近视手术专科已成功开展近视手术120余万例。</p>
+								<p class="c-n first"><span></span>[治疗]&nbsp;&nbsp;<a href="">近视的治疗方法有哪些</a></p>
+								<p class="c-n"><span></span>[最新活动]&nbsp;&nbsp;<a href="">名医集结衣冠庙 我正在抢红包</a></p>
+								<p class="c-n"><span></span>[行业动态]&nbsp;&nbsp;<a href="">2050高度近视将达到9亿 如何</a></p>
+								<p class="c-n"><span></span>[治疗]&nbsp;&nbsp;<a href="">近视的治疗方法有哪些</a></p>
+								<div class="c-bottom">
+									<a href=""><div class="sp1">诊疗设备</div></a>
+									<a href=""><div class="sp1">专家团队</div></a>
+									<a href=""><div class="sp1">先进技术</div></a>
+									<a href=""><div class="sp1">个性服务</div></a>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<script type="text/javascript">
+					$(document).ready(function(){
+						$(".clinic-category .cli-content:eq(0)").css("display","block");
+						$(".clinic-category .cli-content:eq(0)").siblings().css("display","none");
+						$(".clinic-catalog .cli-high").hover(function(){
+							var index = $(this).index();
+//							console.log(index);
+
+							$(".clinic-category .cli-content:eq(" + index +")").fadeIn(0);
+							$(".clinic-category .cli-content:eq(" + index +")").siblings().fadeOut(0);
+						});
+					});
+				</script>
+			</div>
+		</div>
+
+	</div>
+	<!--诊疗项目模块--结束-->
+
+	<!--专家团队--开始-->
+	<div class="expert-team">
+		<div class="w1000 center">
+			<div class="expert-title">
+				<p class="p1">专家团队</p>
+				<p class="p2">EXPERT TEAM</p>
+			</div>
+			<!--专家介绍-->
+			<div class="expert-description">
+				<div class="expert-content">
+					<img src="images/expert_01.png" >
+					<p class="p-t"><span>周进</span>&nbsp;&nbsp;副主任医师</p>
+					<p class="p-h">爱尔眼科成都医院业务副院长</p>
+					<p class="p-d">擅长：在晶体植入矫正屈光不正手术、白内障方面有较深研究，2013年晶体植入手术量全球第一。</p>
+					<div class="p-sharp">
+						<a href="/wechat"><span class="wechat"></span></a>
+						<a href="/msg"><span class="msg"></span></a>
+						<a href="/xinxi"><span class="xinxi"></span></a>
+					</div>
+				</div>
+				<div class="expert-content">
+					<img src="images/expert_01.png" >
+					<p class="p-t"><span>周进</span>&nbsp;&nbsp;副主任医师</p>
+					<p class="p-h">爱尔眼科成都医院业务副院长</p>
+					<p class="p-d">擅长：在晶体植入矫正屈光不正手术、白内障方面有较深研究，2013年晶体植入手术量全球第一。</p>
+					<div class="p-sharp">
+						<a href="/wechat"><span class="wechat"></span></a>
+						<a href="/msg"><span class="msg"></span></a>
+						<a href="/xinxi"><span class="xinxi"></span></a>
+					</div>
+				</div>
+				<div class="expert-content">
+					<img src="images/expert_01.png" >
+					<p class="p-t"><span>周进</span>&nbsp;&nbsp;副主任医师</p>
+					<p class="p-h">爱尔眼科成都医院业务副院长</p>
+					<p class="p-d">擅长：在晶体植入矫正屈光不正手术、白内障方面有较深研究，2013年晶体植入手术量全球第一。</p>
+					<div class="p-sharp">
+						<a href="/wechat"><span class="wechat"></span></a>
+						<a href="/msg"><span class="msg"></span></a>
+						<a href="/xinxi"><span class="xinxi"></span></a>
+					</div>
+				</div>
+				<div class="expert-content">
+					<img src="images/expert_01.png" >
+					<p class="p-t"><span>周进</span>&nbsp;&nbsp;副主任医师</p>
+					<p class="p-h">爱尔眼科成都医院业务副院长</p>
+					<p class="p-d">擅长：在晶体植入矫正屈光不正手术、白内障方面有较深研究，2013年晶体植入手术量全球第一。</p>
+					<div class="p-sharp">
+						<a href="/wechat"><span class="wechat"></span></a>
+						<a href="/msg"><span class="msg"></span></a>
+						<a href="/xinxi"><span class="xinxi"></span></a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!--专家团队--结束-->
+
+	<!--诊疗设备--开始-->
+	<div class="equipment">
+		<div class="w1000 center">
+			<div class="equipment-title">
+				<p class="p1">诊疗设备</p>
+				<p class="p2">DIAGNOSTIC EQUIPMENT</p>
+			</div>
+
+			<div class="equipment-area">
+				<div class="equipment-left">
+
+					<div class="fullSlide">
+						<div class="bd">
+							<ul>
+								<li>
+									<div class="left-detail">
+										<img src="images/equipment_bg.png" alt="">
+										<div class="text-bg">
+											<p class="p-t">德国Visu Max全飞秒激光近视手术系统</p>
+											<p class="p-c">源于德国，基于飞秒再一次全面升级，拥有准分子、飞秒的所有优势，并实现"无刀、无瓣，一生轻松"，全飞秒以保障受术者一生安全为宗旨，更加适合军校、运动员、公务员等运动多高要求的群体。全飞秒技术在美国、德国、日本相继开展两年后。2014年德国蔡司Visu Max全飞秒激光进驻成都爱尔眼科医院。</p>
+											<a href="/detail"><span class="p-d">查看详情</span></a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="left-detail">
+										<img src="images/equipment_bg.png" alt="">
+										<div class="text-bg">
+											<p class="p-t">香港全飞秒激光近视手术系统</p>
+											<p class="p-c">源于德国，基于飞秒再一次全面升级，拥有准分子、飞秒的所有优势，并实现"无刀、无瓣，一生轻松"，全飞秒以保障受术者一生安全为宗旨，更加适合军校、运动员、公务员等运动多高要求的群体。全飞秒技术在美国、德国、日本相继开展两年后。</p>
+											<a href="/detail"><span class="p-d">查看详情</span></a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="left-detail">
+										<img src="images/equipment_bg.png" alt="">
+										<div class="text-bg">
+											<p class="p-t">中国全飞秒激光近视手术系统</p>
+											<p class="p-c">源于中国，基于飞秒再一次全面升级，拥有准分子、飞秒的所有优势，并实现"无刀、无瓣，一生轻松"，全飞秒以保障受术者一生安全为宗旨，更加适合军校、运动员、公务员等运动多高要求的群体。全飞秒技术在美国、德国、日本相继开展两年后。</p>
+											<a href="/detail"><span class="p-d">查看详情</span></a>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="hd"><ul></ul></div>
+						<span class="prev"></span>
+						<span class="next"></span>
+					</div><!--fullSlide end-->
+					<script type="text/javascript">
+						var imgTotal = $(".equipment-left .fullSlide .bd ul li").length;
+						var hdWidth = imgTotal*20;
+						$(".equipment-left .fullSlide .hd").css("width",hdWidth+'px');
+
+						// 只有一张图片，不显示底部圆点和左右箭头
+						$(".equipment-left .fullSlide .prev").css("display","none");
+						$(".equipment-left .fullSlide .next").css("display","none");
+						if(imgTotal == 1){
+							$(".equipment-left .fullSlide .hd").css("display","none");
+						}
+
+						$(".equipment-left .fullSlide").slide({
+							titCell: ".hd ul",
+							mainCell: ".bd ul",
+							effect: "fold",
+							autoPlay: true,
+							autoPage: true,
+							trigger: "click",
+						});
+					</script>
+
+
+					<!--<div class="left-detail">-->
+						<!--<img src="images/equipment_bg.png" alt="">-->
+						<!--<div class="text-bg">-->
+							<!--<p class="p-t">德国Visu Max全飞秒激光近视手术系统</p>-->
+							<!--<p class="p-c">源于德国，基于飞秒再一次全面升级，拥有准分子、飞秒的所有优势，并实现"无刀、无瓣，一生轻松"，全飞秒以保障受术者一生安全为宗旨，更加适合军校、运动员、公务员等运动多高要求的群体。全飞秒技术在美国、德国、日本相继开展两年后。2014年德国蔡司Visu Max全飞秒激光进驻成都爱尔眼科医院。</p>-->
+							<!--<a href="/detail"><span class="p-d">查看详情</span></a>-->
+						<!--</div>-->
+					<!--</div>-->
+				</div>
+
+				<div class="equipment-right">
+					<div class="right-detail">
+						<div class="right-img">
+							<img src="images/equip_right_01.png" alt="">
+						</div>
+						<div class="right-text">
+							<p class="r-t-t">德国Visu Max全飞秒激光 近视手术系统</p>
+							<p class="r-t-c">基于飞秒再一次全面升级，拥有准分子、飞秒的所有优势，并实现<a href="">[详细]</a></p>
+						</div>
+					</div>
+					<div class="right-detail">
+						<div class="right-img">
+							<img src="images/equip_right_02.png" alt="">
+						</div>
+						<div class="right-text">
+							<p class="r-t-t">德国Visu Max全飞秒激光 近视手术系统</p>
+							<p class="r-t-c">基于飞秒再一次全面升级，拥有准分子、飞秒的所有优势，并实现<a href="">[详细]</a></p>
+						</div>
+					</div>
+					<div class="right-detail">
+						<div class="right-img">
+							<img src="images/equip_right_03.png" alt="">
+						</div>
+						<div class="right-text">
+							<p class="r-t-t">德国Visu Max全飞秒激光 近视手术系统</p>
+							<p class="r-t-c">基于飞秒再一次全面升级，拥有准分子、飞秒的所有优势，并实现<a href="">[详细]</a></p>
+						</div>
+					</div>
+					<div class="right-detail">
+						<div class="right-img">
+							<img src="images/equip_right_03.png" alt="">
+						</div>
+						<div class="right-text">
+							<p class="r-t-t">德国Visu Max全飞秒激光 近视手术系统</p>
+							<p class="r-t-c">基于飞秒再一次全面升级，拥有准分子、飞秒的所有优势，并....<a href="">[详细]</a></p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!--诊疗设备--结束-->
+
+	<!--院内环境--开始-->
+	<div class="environment">
+		<div class="w1000 center">
+			<div class="environment-title">
+				<p class="p1">院内环境</p>
+				<p class="p2">HOSPITAL ENVIRONMENT</p>
+			</div>
+
+			<div class="environment-content">
+				<div class="ec-left">
+					<img src="images/environment_01.png" alt="">
+					<p class="ec-text"><span></span>门诊大厅</p>
+				</div>
+
+				<div class="ec-right">
+					<div class="ec-right-one">
+						<div class="ec-right-d first">
+							<img src="images/environment_02.png" alt="">
+							<p class="ec-text"><span></span>综合门诊科室</p>
+						</div>
+						<div class="ec-right-d">
+							<img src="images/environment_03.png" alt="">
+							<p class="ec-text"><span></span>医生检验室</p>
+						</div>
+					</div>
+					<div class="ec-right-two">
+						<div class="ec-right-d first">
+							<img src="images/environment_04.png" alt="">
+							<p class="ec-text"><span></span>准分子屈光中心</p>
+						</div>
+						<div class="ec-right-d">
+							<img src="images/environment_05.png" alt="">
+							<p class="ec-text"><span></span>患者休息区</p>
+						</div>
+					</div>
+
+
+
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+	<!--院内环境--结束-->
+
 	<!-- 底部 -->
 	<div class="footer">
 		<div class="w1000 center">
@@ -360,14 +888,11 @@
 				<div class="contact">
 					<p class="common-title con-title">联系方式</p>
 					<div class="con-text">
-						<span class="icon1"></span>
-						<span class="icon2"></span>
-						<span class="icon3"></span>
-						<p class="p1">免费咨询电话（7*365）</p>
+						<p class="p1"><span class="icon1"></span>免费咨询电话（7*365）</p>
 						<p class="p2">400-788-9900</p>
-						<p class="p1 p3">健康咨询热线（8:30-23:00）</p>
+						<p class="p1 p3"><span class="icon2"></span>健康咨询热线（8:30-23:00）</p>
 						<p class="p2">028-8507 5888</p>
-						<p class="p1 p3">成都市成华区双林路388号</p>
+						<p class="p1 p3"><span class="icon3"></span>成都市成华区双林路388号</p>
 					</div>
 				</div>
 
