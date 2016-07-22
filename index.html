@@ -94,10 +94,14 @@
 	    <div class="fullSlide">
 	        <div class="bd">
 		        <ul>
-				    <li><a href="/a"><img src="images/11.jpg" alt=""/></a></li>
-				    <li><a href="/b"><img src="images/22.jpg" alt=""/></a></li>
- 	                <li><a href="/c"><img src="images/33.jpg" alt=""/></a></li>
-				    <li><a href="/d"><img src="images/44.jpg" alt=""/></a></li>
+					<li style="background:url(images/11.jpg) center 0 no-repeat;"><a href="#"></a></li>
+					<li style="background:url(images/22.jpg) center 0 no-repeat;"><a href="#"></a></li>
+					<li style="background:url(images/33.jpg) center 0 no-repeat;"><a href="#"></a></li>
+					<li style="background:url(images/44.jpg) center 0 no-repeat;"><a href="#"></a></li>
+				    <!--<li><a href="/a"><img src="images/11.jpg" alt=""/></a></li>-->
+				    <!--<li><a href="/b"><img src="images/22.jpg" alt=""/></a></li>-->
+ 	                <!--<li><a href="/c"><img src="images/33.jpg" alt=""/></a></li>-->
+				    <!--<li><a href="/d"><img src="images/44.jpg" alt=""/></a></li>-->
 				</ul>
 	        </div>
 	        <div class="hd"><ul></ul></div>
@@ -112,22 +116,8 @@
 			$(".banner .fullSlide .prev").css("top",arrowTop);
 			$(".banner .fullSlide .next").css("top",arrowTop);
 
-			// 底部小点自动居中
-			var winWidth = $(window).width();
-			var imgTotal = $(".banner .fullSlide .bd ul li a img").length;
-			var hdWidth = imgTotal*20;
-			var hdLeft = (winWidth - hdWidth)/2;
-			$(".banner .fullSlide .hd").css("width",hdWidth+'px');
-			$(".banner .fullSlide .hd").css("left",hdLeft+'px');
-
-            // 图片宽度 > 窗口宽度时，对图片进行居中显示
-            var imgWidth = $(".banner .fullSlide .bd ul li img").width();
-            if(imgWidth>winWidth){
-            	var imgLeft = (imgWidth - winWidth)/2;
-            	$(".banner .fullSlide .bd img").css("left",'-'+imgLeft+'px');
-            }
-
 			// 只有一张图片，不显示底部圆点和左右箭头
+			var imgTotal = $(".banner .fullSlide .bd ul li").length;
 			if(imgTotal == 1){
 				$(".banner .fullSlide .hd").css("display","none");
 				$(".banner .fullSlide").hover(function(){
@@ -136,11 +126,10 @@
 			}else{
 				// 鼠标在图片上时才显示左右箭头
 				$(".banner .fullSlide").hover(function(){
-							$(this).find(".prev,.next").stop(true, true).fadeTo("show", 0.8)
-						},
-						function(){
-							$(this).find(".prev,.next").fadeOut()
-						});
+					$(this).find(".prev,.next").stop(true, true).fadeTo("show", 0.8)
+				},function(){
+					$(this).find(".prev,.next").fadeOut()
+				});
 			}
 
 			$(".banner .fullSlide").slide({
