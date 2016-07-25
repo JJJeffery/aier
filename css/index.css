@@ -1,3 +1,28 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+body{
+	font: 14px MicroSoft YaHei;
+}
+img{
+	border: none; 
+}
+div{
+	border: none;
+	display: block; 
+}
+ul,ol,li{
+	list-style:none;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+
+
+
+
 .w1000{
 	width: 1000px;	
 }
