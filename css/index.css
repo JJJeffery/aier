@@ -1,244 +1,11 @@
-*{
-	padding: 0px;
-	margin: 0px;
-}
-body{
-	font: 14px MicroSoft YaHei;
-}
-img{
-	border: none; 
-}
-div{
-	border: none;
-	display: block; 
-}
-ul,ol,li{
-	list-style:none;
-}
-a{
-	text-decoration: none;
-	color: black;
-}
-
-
-
-
-.w1000{
-	width: 1000px;	
-}
-.center{
-	margin: 0 auto;
-}
-
-/*顶部头信息--开始*/
-.header_top{
-	height: 35px;
-	line-height: 35px;
-	font-size: 14px;
-	/*background-color: red;*/
-}
-.header_top .text{
-	color: #b2b2b2;
-}
-
-.header_top .tell{
-	float: right;
-	position: relative;
-}
-
-.header_top .tell .bgc{
-	background: url("../images/tel.png") no-repeat;
-	width: 21px;
-	height: 32px;
-	position: absolute;
-	left: -25px;
-	top: 2px;
-}
-
-.header_top .tell .t{
-	color:#00298f;
-	font-size: 15px;
-}
-
-.header_top .tell .n{
-	color:#0c2e88;
-	font-size: 16px;
-	font-weight: bold;
-}
-/*顶部头信息--结束*/
-
-
-/*LOGO及咨询平台--开始*/
-.header{
-	background-color: #00489c;
-	height: 100px;
-	width: 100%;
-}
-
-.header .logo{
-	float: left;
-	padding-top: 28.5px;
-}
-
-.header .sharf{
-	float: right;
-    margin-left: 200px;
-}
-
-.header .sharf .consult{
-	height: 60px;
-	line-height: 60px;
-	position: relative;
-}
-
-.header .sharf .consult span{
-	color: #e1e6ee;
-	font-size: 16px;
-}
-
-.header .sharf .consult .qq{
-	background: url("../images/sharp.png") no-repeat -2px 0px;
-	width: 23px;
-	height: 23px;
-	position: absolute;
-	top: 20px;
-	left: 115px;
-}
-.header .sharf .consult .qq:hover{
-	background: url("../images/sharp_hover.png") no-repeat -2px 0px;
-}
-
-.header .sharf .consult .wechat{
-	background: url("../images/sharp.png") no-repeat -35px 0px;
-	width: 23px;
-	height: 23px;
-	position: absolute;
-	top: 20px;
-	left: 145px;
-}
-.header .sharf .consult .wechat:hover{
-	background: url("../images/sharp_hover.png") no-repeat -35px 0px;
-}
-
-.header .sharf .consult .weibo{
-	background: url("../images/sharp.png") no-repeat -68px 0px;
-	width: 23px;
-	height: 23px;
-	position: absolute;
-	top: 20px;
-	left: 175px;
-}
-.header .sharf .consult .weibo:hover{
-	background: url("../images/sharp_hover.png") no-repeat -68px 0px;
-}
-
-.header .sharf .search{
-	position: relative;
-
-}
-
-.header .sharf .search .search-keywords{
-	border:0;
-	outline:none;
-    border-radius: 12px;
-    height: 25px;
-    width: 200px;
-    padding-left: 5px;
-}
-
-.header .sharf .search .search-submit{
-	background: url("../images/header_search.png") no-repeat;
-    width: 19px;
-    height: 22px;
-    border: none;
-    position: absolute;
-    top: 2px;
-    right: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-/*LOGO及咨询平台--结束*/
-
-/*菜单栏目--开始*/
-.menu{
-	height: 54px;
-}
-
-.menu .menu-title{
-	display: block;
-    float: left;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-}
-
-.menu .menu-title li{
-	display: block;
-    float: left;
-    width: 90px;
-    margin-right: 20px;
-    cursor: pointer;
-}
-
-.menu .menu-title li a{
-	color: #024aa7;
-	font-size: 17px;
-	font-weight: bold;
-	letter-spacing: 1px;
-}
-
-.menu .menu-title li:hover,.menu .menu-title li:active{
-	border-bottom: 4px solid #024aa7;
-}
-
-.menu .drop-down{
-	float: right;
-	width: 150px;
-	height: 54px;
-	line-height: 54px;
-	background-color: #0386d6;
-	position: relative;
-	cursor: pointer;
-}
-
-.menu .drop-down .ico{
-	background: url("../images/menu_01.png") no-repeat;
-	width: 26px;
-	height: 26px;
-	position: absolute;
-    top: 15px;
-    left: 20px;
-}
-
-.menu .drop-down .text{
-	padding-left: 58px;
-	color: white;
-	font-weight: bold;
-	font-size: 16px;
-	letter-spacing: 2px;
-}
-
-.menu .drop-down .dd-menu{
-	background-color: #0386d6;
-	width: 150px;
-	z-index: 100;
-	position: absolute;
-	display: none;
-}
-
-.menu .drop-down .dd-menu ul li{
-	height: 40px;
-    line-height: 40px;
-    font-weight: 600;
-    padding-left: 23px;
-    color: white;
-}
-
-.menu .drop-down .dd-menu ul li:hover{
-	background-color: white;
-	color: #0386d6;
-}
-/*菜单栏目--结束*/
+*{padding: 0px;margin: 0px;}
+body{font: 14px MicroSoft YaHei;}
+img{border: none;}
+div{border: none;display: block;}
+ul,ol,li{list-style:none;}
+a{text-decoration: none;color: black;}
+.w1000{width: 1000px;}
+.center{margin: 0 auto;}
 
 
 /*大横幅图片轮播区域--开始*/
@@ -334,7 +101,6 @@ a{
 	width: 100%;
 	background-color: #f4f9ff;
 }
-
 .small_banner .smallSlide{
 	width:640px;
 	position:relative;
@@ -397,23 +163,19 @@ a{
 	z-index:1;
 	width:30px;
 	height:48px;
-	/*border-radius: 4px;*/
 	background:url(../images/eye_149.png) 0px 0px no-repeat;
 	cursor:pointer;
 	filter:alpha(opacity=50);
 	opacity:0.8;
-	/*display:none;*/
 }
 .small_banner .smallSlide .next{
 	left:auto;
 	right:1%;
 	background-position:-30px 0px;
 }
-
 .small_banner .smallSlide .prev:hover{
 	background:url(../images/eye_150.png) 0px 0px no-repeat;
 }
-
 .small_banner .smallSlide .next:hover{
 	background:url(../images/eye_150.png) -30px 0px no-repeat;
 }
@@ -421,7 +183,6 @@ a{
 
 
 /*爱尔眼科医院信息、挂号信息、医院动态*/
-
 .information{
 	height: 340px;
 }
@@ -431,11 +192,8 @@ a{
 	float: left;
 	width: 640px;
 	height: 340px;
-	/*background-color: gray;*/
 }
-
 .information .info-intro .info-box{
-	/*border: 1px solid red;*/
 	width: 155px;
 	text-align: center;
 	margin-top: 25px;
@@ -449,16 +207,12 @@ a{
 	margin: 0 auto;
 	border-radius: 2px;
 }
-
-
 .information .info-intro .info-box p{
-	/*text-align: center;*/
 	font-weight: 500;
 	font-size: 13px;
     margin-top: 5px;
     text-shadow: 0px 1px 1px #a9a9a9;
 }
-
 .information .info-intro .info-box .p1{
 	margin-top: 10px;
 	color: #0b55ab;
@@ -481,7 +235,6 @@ a{
 	height: 180px;
 	position: relative;
 }
-
 .information .info-news .guahao .guahao-time{
 	position: absolute;
 	top: 20px;
@@ -491,7 +244,6 @@ a{
 	line-height: 50px;
 	border: 1px solid white; 
 }
-
 .information .info-news .guahao .guahao-time .ico{
 	position: absolute;
     top: 14px;
@@ -501,70 +253,55 @@ a{
     height: 23px;
     background: url("../images/guahao_icon.png") no-repeat;
 }
-
 .information .info-news .guahao .guahao-time .text{
 	color: white;
 	padding-left: 60px;
 }
-
 .information .info-news .guahao .guahao-time .text span{
 	font-weight: bold;
 }
-
 .information .info-news .guahao .guahao-intro{
 	position: absolute;
 	bottom: 20px;
 	left: 10px;
 }
-
 .information .info-news .guahao .guahao-intro .intro{
 	float: left;
 	margin-left: 4px;
-	/*border: 1px solid red;*/
 	width: 80px;
 	text-align: center;
 	cursor: pointer;
 }
-
 .information .info-news .guahao .guahao-intro .intro .img{
 	display: block;
 	margin: 0 auto;
 	width: 45px;
 	height: 45px;
 }
-
 .information .info-news .guahao .guahao-intro .intro .img1{
 	background: url("../images/gh_01.png") no-repeat;
 }
-
 .information .info-news .guahao .guahao-intro .intro .img2{
 	background: url("../images/gh_02.png") no-repeat;
 }
-
 .information .info-news .guahao .guahao-intro .intro .img3{
 	background: url("../images/gh_03.png") no-repeat;
 }
-
 .information .info-news .guahao .guahao-intro .intro .img4{
 	background: url("../images/gh_04.png") no-repeat;
 }
-
 .information .info-news .guahao .guahao-intro .intro:hover{
 	color: white;
 }
-
 .information .info-news .guahao .guahao-intro .intro:hover .img1{
 	background: url("../images/gh_01_hover.png") no-repeat;
 }
-
 .information .info-news .guahao .guahao-intro .intro:hover .img2{
 	background: url("../images/gh_02_hover.png") no-repeat;
 }
-
 .information .info-news .guahao .guahao-intro .intro:hover .img3{
 	background: url("../images/gh_03_hover.png") no-repeat;
 }
-
 .information .info-news .guahao .guahao-intro .intro:hover .img4{
 	background: url("../images/gh_04_hover.png") no-repeat;
 }
@@ -575,20 +312,17 @@ a{
 	background-color: #63c5f4;
 	height: 500px;
 }
-
 .information .info-news .hospital-news .h-news{
 	width: 320px;
 	margin: 0 auto;
     padding-top: 20px;
 }
-
 .information .info-news .hospital-news .h-news .c{
 	font-size: 25px;
 	font-family: 宋体;
 	color: #1c8eaf;
 	font-weight: 600;
 }
-
 .information .info-news .hospital-news .h-news .e{
 	font-size: 12px;
 	font-family: -webkit-pictograph;
@@ -596,21 +330,17 @@ a{
     opacity: 0.3;
     letter-spacing: 0.5px;
 }
-
 .information .info-news .hospital-news .h-news .news{
 	margin-top: 15px;
 }
-
 .information .info-news .hospital-news .h-news .news .news-text{
 	float: right;
 	width: 170px;
 }
-
 .information .info-news .hospital-news .h-news .news .news-text .n-t-t{
 	color: #033b93;
     font-weight: 600;
 }
-
 .information .info-news .hospital-news .h-news .news .news-text .n-t-a{
 	margin-top: 20px;
     opacity: 0.5;
@@ -621,24 +351,19 @@ a{
 .information .info-news .hospital-news .h-news .news .news-text .n-t-a a:hover{
 	text-decoration: underline;
 }
-
-
 .information .info-news .hospital-news .t-news{
 	width: 320px;
     margin: 0 auto;
     border-top: 1px solid #51b3e0;
     margin-top: 20px;
 }
-
 .information .info-news .hospital-news .t-news p{
 	margin-top: 10px;
 }
-
 .information .info-news .hospital-news .t-news .cate{
     color: #033b93;
     font-weight: 600;
 }
-
 .information .info-news .hospital-news .t-news .art{
 	color: white;
 	opacity: 0.8;
@@ -655,9 +380,7 @@ a{
 	position: absolute;
     left: 370px;
     bottom: 160px;
-	/*border:1px solid red;*/
 }
-
 .information .info-news .right_module .zjzx{
 	width: 80px;
 	height: 90px;
@@ -665,7 +388,6 @@ a{
 	text-align: center;
 	position: relative;
 }
-
 .information .info-news .right_module .zjzx span{
 	background: url("../images/slide_01.png") no-repeat;
     width: 40px;
@@ -674,13 +396,11 @@ a{
     top: 10px;
     left: 20px;
 }
-
 .information .info-news .right_module p{
 	padding-top: 50px;
 	color: white;
     font-size: 15px;
 }
-
 .information .info-news .right_module .zxzx{
 	width: 80px;
 	height: 90px;
@@ -688,7 +408,6 @@ a{
 	text-align: center;
 	position: relative;
 }
-
 .information .info-news .right_module .zxzx span{
 	background: url("../images/slide_02.png") no-repeat;
     width: 40px;
@@ -697,7 +416,6 @@ a{
     top: 10px;
     left: 20px;
 }
-
 .information .info-news .right_module .lydh{
 	width: 80px;
 	height: 90px;
@@ -705,7 +423,6 @@ a{
 	text-align: center;
 	position: relative;
 }
-
 .information .info-news .right_module .lydh span{
 	background: url("../images/slide_03.png") no-repeat;
     width: 40px;
@@ -715,49 +432,39 @@ a{
     left: 20px;
 }
 /*右侧咨询模块--结束*/
-
 /*爱尔眼科医院信息、挂号信息、医院动态*/
-
 
 /*联系我们、附近医院、在线支付模块--开始*/
 .three_area{
 	margin-top: 20px;
 	height: 170px;
-	/*border: 1px solid red;*/
 }
-
 .three_area .plate-info{
 	width: 32.3%;
 	float: left;
 	color: white;
 	height: 170px;
 }
-
 .three_area .info1{
 	background-color: #43b9f6;
 }
-
 .three_area .info2{
 	background-color: #6686ff;
 	margin-left: 15px;
 }
-
 .three_area .info3{
 	background-color: #9878ff;
 	margin-left: 15px;
 }
-
 .three_area .plate-info p{
 	padding-left: 35px;
     padding-right: 35px;
 }
-
 .three_area .plate-info .p1{
 	font-size: 12px;
 	margin-top: 20px;
 	opacity: 0.8;
 }
-
 .three_area .plate-info .p2{
 	    margin-top: 5px;
     font-weight: bold;
@@ -766,14 +473,12 @@ a{
     text-shadow: 1px 0px 1px;
     opacity: 0.9;
 }
-
 .three_area .plate-info .p3{
 	margin-top: 15px;
     margin-bottom: 15px;
     opacity: 0.6;
     font-size: 13px;
 }
-
 .three_area .plate-info a{
 	color: white;
     border-bottom: 1px solid white;
@@ -788,7 +493,6 @@ a{
 	background: url("../images/clinic-project.jpg");
 	margin-top: 20px;
 }
-
 .clinic-project .clinic-title{
 	font-family: 宋体;
 	font-weight: bold;
@@ -806,7 +510,6 @@ a{
 	letter-spacing: 2px;
 	color: #ffffff;
 }
-
 .clinic-project .clinic-scroll .clinic-catalog{
 	margin-top: 10px;
 	height:100px;
@@ -831,7 +534,6 @@ a{
 	font-size: 14px;
 	color: white;
 }
-
 .clinic-project .clinic-scroll .cli-high span{
 	background: url("../images/hot.png") no-repeat;
 	position: absolute;
@@ -840,13 +542,11 @@ a{
 	width: 28px;
 	height: 17px;
 }
-
 .clinic-project .clinic-scroll .clinic-category{
 	margin-top: 30px;
 	height:400px;
 	overflow: hidden;
 }
-
 .clinic-project .clinic-scroll .clinic-category .cli-content{
 	height:400px;
 }
@@ -870,14 +570,12 @@ a{
 	font-weight: 500;
 	color: #404d60;
 }
-
 .clinic-project .clinic-scroll .clinic-category .cli-content .cli-con-right .right-box .c-c{
 	margin-top: 20px;
 	font-size: 14px;
 	line-height: 24px;
 	color: #647088;
 }
-
 .clinic-project .clinic-scroll .clinic-category .cli-content .cli-con-right .right-box .first{
 	margin-top: 10px;
 }
@@ -888,7 +586,6 @@ a{
 	position: relative;
 	padding-left: 15px;
 }
-
 .clinic-project .clinic-scroll .clinic-category .cli-content .cli-con-right .right-box .c-n span{
 	width:11px;
 	height:11px;
@@ -904,7 +601,6 @@ a{
 	color: #003493;
 	text-decoration: underline;
 }
-
 .clinic-project .clinic-scroll .clinic-category .cli-content .cli-con-right .right-box .c-bottom{
 	background-color: #fe824c;
 	border-radius: 5px;
@@ -913,9 +609,7 @@ a{
 	height: 40px;
 	margin-top: 20px;
 	padding: 0 5px;
-
 }
-
 .clinic-project .clinic-scroll .clinic-category .cli-content .cli-con-right .right-box .c-bottom .sp1{
 	font-size: 16px;
 	height:40px;
@@ -924,15 +618,12 @@ a{
 	width:90px;
 	float: left;
 }
-
 .clinic-project .clinic-scroll .clinic-category .cli-content .cli-con-right .right-box .c-bottom .sp1:hover{
 	background-color: #dc5107;
 	cursor: pointer;
 	color: white;
 }
 /*诊疗项目--结束*/
-
-
 
 /*专家团队--开始*/
 .expert-team{
@@ -982,7 +673,6 @@ a{
 	line-height:18px;
 	color: #0086d8;
 }
-
 .expert-team .expert-content .p-d{
 	margin-top: 20px;
 	color: #3e4e5d;
@@ -1034,7 +724,6 @@ a{
 .expert-team .expert-content .p-sharp .xinxi:hover{
 	background: url("../images/expert_sharp_hover.png") no-repeat -80px 0px;
 }
-
 /*专家团队--结束*/
 
 /*诊疗设备--开始*/
@@ -1113,7 +802,6 @@ a{
 	margin-top: 20px;
 }
 
-
 /*左侧轮播CSS*/
 .equipment-left .fullSlide{
 	width:620px;
@@ -1136,10 +824,6 @@ a{
 	overflow:hidden;
 	text-align:center;
 }
-/*.full-scroll .fullSlide .bd li a{*/
-	/*display:block;*/
-	/*height:300px;*/
-/*}*/
 .equipment-left .fullSlide .hd{
 	width:620px;
 	position:absolute;
@@ -1199,14 +883,12 @@ a{
 	background:url(../images/eye_153.png) -41px 0px no-repeat;
 }
 
-
 /*右侧*/
 .equipment-right{
 	width:350px;
 	height:530px;
 	float: right;
 }
-
 .equipment-right .right-detail{
 	width:350px;
 	height:110px;
@@ -1245,11 +927,7 @@ a{
 .equipment-right .right-detail .right-text .r-t-c a:hover{
 	text-decoration: underline;
 }
-
-
-
 /*诊疗设备--结束*/
-
 
 /*院内环境--开始*/
 .environment{
@@ -1320,205 +998,4 @@ a{
 .environment .environment-content .ec-right .first{
 	margin-right: 40px;
 }
-
 /*院内环境--结束*/
-
-
-/*底部信息--开始*/
-.footer{
-	margin-top: 50px;
-	width: 100%;
-	background-color: #2b3648;
-	height: 500px;
-}
-
-.footer .search{
-	text-align: center;
-	padding-top: 30px;
-	/*border:1px solid red;*/
-	height: 70px;
-	
-}
-.footer .search .footer-form{
-	position: relative;
-    width: 348px;
-    margin: 0 auto;
-}
-.footer .search .footer-keywords{
-	font-family: Microsoft Yahei;
-	font-size: 14px;
-	border:1px solid #0a61be;
-	outline:none;
-    border-radius: 2px 0 0 2px;
-    height: 38px;
-    width: 230px;
-    padding-left: 31px;
-    background-color: #41516a;
-	color: white;
-}
-
-.footer .search .footer-submit{
-	background-color: #0a61be;
-    width: 85px;
-    height: 40px;
-    border: none;
-    border-radius: 0 2px 2px 0;
-    color: white;
-    cursor: pointer;
-    text-align: center;
-    font-size: 14px;
-    font-family: Microsoft Yahei;
-}
-
-.footer .search .ico{
-	width: 24px;
-    height: 25px;
-    background: url("../images/footer_search.png");
-    position: absolute;
-    left: 6px;
-    top: 9px;
-}
-
-.footer .nav_con_code{
-	margin-top: 20px;
-	/*border:1px solid red;*/
-	height: 260px;
-}
-
-/*便捷导航*/
-.footer .nav_con_code .easy-navigation{
-	width: 300px;
-	height: 260px;
-	float: left;
-}
-
-.footer .nav_con_code .common-title{
-	color: white;
-    font-size: 18px;
-    font-weight: bold;
-    text-shadow: 0.1px 0px 0.2px;
-    opacity: 0.8;
-    padding-bottom: 20px;
-}
-
-.footer .nav_con_code .easy-navigation .nav-text ul li{
-	float: left;
-    height: 40px;
-    line-height: 40px;
-    width: 90px;
-    color: white;
-    opacity: 0.4;
-}
-
-/*联系方式*/
-.footer .nav_con_code .contact{
-	width: 400px;
-	height: 260px;
-	float: left;
-}
-
-.footer .nav_con_code .contact .con-title{
-	padding-left: 70px;
-}
-
-.footer .nav_con_code .contact .con-text{
-	border-left: 1px solid #212c3e;
-    border-right: 1px solid #212c3e;
-
-    padding-left: 70px;
-    height: 200px;
-}
-
-.footer .nav_con_code .contact .con-text .p1{
-	position: relative;
-	color: #506eac;
-    font-size: 15px;
-    opacity: 0.8;
-    text-shadow: 0.1px 0px 0.1px;
-    margin-top: 8px;
-    margin-bottom: 2px;
-    padding-left: 50px;
-}
-
-.footer .nav_con_code .contact .con-text .p2{
-	color: #6db928;
-    font-size: 23px;
-    text-shadow: 0.4px 0px 1px;
-    padding-left: 50px;
-}
-
-.footer .nav_con_code .contact .con-text .p3{
-	margin-top: 30px;
-}
-
-.footer .nav_con_code .contact .con-text .icon1{
-	width: 26px;
-	height: 30px;
-	background: url("../images/footer_ico.png") 0px 0px no-repeat;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-}
-
-.footer .nav_con_code .contact .con-text .icon2{
-	width: 26px;
-	height: 30px;
-	background: url("../images/footer_ico.png") 0px -30px no-repeat;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-}
-
-.footer .nav_con_code .contact .con-text .icon3{
-	width: 26px;
-	height: 30px;
-	background: url("../images/footer_ico.png") 0px -60px no-repeat;
-	position: absolute;
-	bottom: -5px;
-	left: 0px;
-}
-
-/*手机访问*/
-.footer .nav_con_code .mobile{
-	width: 300px;
-	height: 260px;
-    float: left;
-    text-align: right;
-}
-
-.footer .nav_con_code .mobile .mo-title{
-	padding-right: 5px;
-}
-
-.footer .nav_con_code .mobile img{
-	margin-top: 12px;
-}
-
-.footer .nav_con_code .mobile .mo-text{
-	font-size: 15px;
-    margin-top: 20px;
-    color: white;
-    opacity: 0.4;
-}
-
-
-/*底部备案信息*/
-.footer .archival{
-	text-align: center;
-}
-
-.footer .archival .p1{
-	color: #506eac;
-    font-size: 15px;
-    opacity: 0.8;
-    text-shadow: 0.1px 0px 0.1px;
-    margin-top: 30px;
-}
-.footer .archival .p2{
-	margin-top: 10px;
-    color: white;
-    opacity: 0.4;
-}
-/*底部信息--结束*/
-
-

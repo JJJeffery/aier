@@ -1,0 +1,196 @@
+/*底部信息--开始*/
+.footer{
+    margin-top: 50px;
+    width: 100%;
+    background-color: #2b3648;
+    height: 500px;
+}
+
+.footer .search{
+    text-align: center;
+    padding-top: 30px;
+    /*border:1px solid red;*/
+    height: 70px;
+
+}
+.footer .search .footer-form{
+    position: relative;
+    width: 348px;
+    margin: 0 auto;
+}
+.footer .search .footer-keywords{
+    font-family: Microsoft Yahei;
+    font-size: 14px;
+    border:1px solid #0a61be;
+    outline:none;
+    border-radius: 2px 0 0 2px;
+    height: 38px;
+    width: 230px;
+    padding-left: 31px;
+    background-color: #41516a;
+    color: white;
+}
+
+.footer .search .footer-submit{
+    background-color: #0a61be;
+    width: 85px;
+    height: 40px;
+    border: none;
+    border-radius: 0 2px 2px 0;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    font-family: Microsoft Yahei;
+}
+
+.footer .search .ico{
+    width: 24px;
+    height: 25px;
+    background: url("../images/footer_search.png");
+    position: absolute;
+    left: 6px;
+    top: 9px;
+}
+
+.footer .nav_con_code{
+    margin-top: 20px;
+    /*border:1px solid red;*/
+    height: 260px;
+}
+
+/*便捷导航*/
+.footer .nav_con_code .easy-navigation{
+    width: 300px;
+    height: 260px;
+    float: left;
+}
+
+.footer .nav_con_code .common-title{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 0.1px 0px 0.2px;
+    opacity: 0.8;
+    padding-bottom: 20px;
+}
+
+.footer .nav_con_code .easy-navigation .nav-text ul li{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    width: 90px;
+    color: white;
+    opacity: 0.4;
+}
+
+/*联系方式*/
+.footer .nav_con_code .contact{
+    width: 400px;
+    height: 260px;
+    float: left;
+}
+
+.footer .nav_con_code .contact .con-title{
+    padding-left: 70px;
+}
+
+.footer .nav_con_code .contact .con-text{
+    border-left: 1px solid #212c3e;
+    border-right: 1px solid #212c3e;
+
+    padding-left: 70px;
+    height: 200px;
+}
+
+.footer .nav_con_code .contact .con-text .p1{
+    position: relative;
+    color: #506eac;
+    font-size: 15px;
+    opacity: 0.8;
+    text-shadow: 0.1px 0px 0.1px;
+    margin-top: 8px;
+    margin-bottom: 2px;
+    padding-left: 50px;
+}
+
+.footer .nav_con_code .contact .con-text .p2{
+    color: #6db928;
+    font-size: 23px;
+    text-shadow: 0.4px 0px 1px;
+    padding-left: 50px;
+}
+
+.footer .nav_con_code .contact .con-text .p3{
+    margin-top: 30px;
+}
+
+.footer .nav_con_code .contact .con-text .icon1{
+    width: 26px;
+    height: 30px;
+    background: url("../images/footer_ico.png") 0px 0px no-repeat;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.footer .nav_con_code .contact .con-text .icon2{
+    width: 26px;
+    height: 30px;
+    background: url("../images/footer_ico.png") 0px -30px no-repeat;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.footer .nav_con_code .contact .con-text .icon3{
+    width: 26px;
+    height: 30px;
+    background: url("../images/footer_ico.png") 0px -60px no-repeat;
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+}
+
+/*手机访问*/
+.footer .nav_con_code .mobile{
+    width: 300px;
+    height: 260px;
+    float: left;
+    text-align: right;
+}
+
+.footer .nav_con_code .mobile .mo-title{
+    padding-right: 5px;
+}
+
+.footer .nav_con_code .mobile img{
+    margin-top: 12px;
+}
+
+.footer .nav_con_code .mobile .mo-text{
+    font-size: 15px;
+    margin-top: 20px;
+    color: white;
+    opacity: 0.4;
+}
+
+
+/*底部备案信息*/
+.footer .archival{
+    text-align: center;
+}
+
+.footer .archival .p1{
+    color: #506eac;
+    font-size: 15px;
+    opacity: 0.8;
+    text-shadow: 0.1px 0px 0.1px;
+    margin-top: 30px;
+}
+.footer .archival .p2{
+    margin-top: 10px;
+    color: white;
+    opacity: 0.4;
+}
+/*底部信息--结束*/
