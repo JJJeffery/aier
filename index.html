@@ -5,6 +5,7 @@
 	<meta name="keywords" content="爱尔眼科,爱尔眼科医院,爱尔眼科东区首页" />
     <meta name="discription" content="爱尔眼科东区首页" />
     <meta name="author" content="Jeffery Li" />
+	<base target="_blank">
 	<link rel="shortcut icon" href="images/favicon.ico">
 	<title>成都东区爱尔眼科医院</title>
 	<script type="text/javascript" src="js/jquery.js"></script>
@@ -35,10 +36,20 @@
 			<div class="sharf">
 			    <div class="consult">
 				    <span>官方咨询平台 : </span>
-				    <a href="/qq"><span class="qq"></span></a>
-				    <a href="/wechat"><span class="wechat"></span></a>
-				    <a href="/weibo"><span class="weibo"></span></a>
+				    <a href="http://wpa.qq.com/msgrd?v=3&uin=3413724873&site=qq&menu=yes"><span class="qq"></span></a>
+				    <a href="javascript:void(0)"><span class="wechat"></span></a>
+					<div class="wechat-code"><img src="images/aiereast-weixin-94.png" alt="关注微信公众号"></div>
+				    <a href="http://weibo.com/aierdq"><span class="weibo"></span></a>
 			    </div>
+				<script type="text/javascript">
+					$(".wechat-code").hide();
+					$(".wechat").mouseover(function(){
+						$(".wechat-code").fadeIn('fast');
+					})
+					$(".wechat").mouseleave(function(){
+						$(".wechat-code").fadeOut('fast');
+					})
+				</script>
 			    <div class="search">
 			    	<form name="formsearch" action="/plus/search.php">
 			    		<input type="text" name="q" class="search-keywords" id="search-keywords" maxlength="15" />
@@ -54,14 +65,155 @@
     <!-- 菜单栏目 -->
 	<div class="menu">
 		<div class="w1000 center">
-			<ul class="menu-title">
-                <li><a href="index.html">爱尔首页</a></li>
-                <li><a href="" >关于爱尔</a></li>
-                <li><a href="" >患者服务</a></li>
-                <li><a href="" >专家团队</a></li>
-                <li><a href="" >公益慈善</a></li>
-                <li><a href="" >角膜捐献</a></li>
-            </ul>
+			<div class="menu-nav">
+				<ul class="menu-title">
+					<li class="li-first"><a href="index.html">爱尔首页</a></li>
+					<li class="li-first">
+						<a href="" >关于爱尔</a>
+						<div class="menu-about menu-hover-show">
+							<div class="m-left">
+								<ul class="m-ul">
+									<li><a href="">爱尔新闻</a></li>
+									<li><a href="">爱尔名医</a></li>
+									<li><a href="">社会责任</a></li>
+									<li><a href="">诊疗设备</a></li>
+									<li><a href="">诊疗设备</a></li>
+								</ul>
+							</div>
+							<div class="m-right">
+								<div class="m-r-detail">
+									<a href=""><img src="images/menu_gyae01.jpg" alt="成都东区爱尔眼科医院"></a>
+									<div class="t"><a href="">成都东区爱尔眼科医院</a></div>
+									<p><a href="">爱尔眼科医院集团是中国规模最大的眼科连锁机构，中国第一家IPO上市的医疗机构，是国内首家…</a></p>
+								</div>
+								<div class="m-r-detail">
+									<a href=""><img src="images/menu_gyae02.jpg" alt="爱心助力人类眼健康事业"></a>
+									<div class="t"><a href="">爱心助力人类眼健康事业</a></div>
+									<p><a href="">我们创新医疗服务模式，持续开发和满足患者的需求，使所有的人，无论贫富贵贱，都能够享受到眼健康的权利。</a></p>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li class="li-first">
+						<a href="" >专家团队</a>
+						<div class="menu-expert menu-hover-show">
+							<div class="m-left">
+								<ul class="m-ul">
+									<li><a href="">近视手术专家</a></li>
+									<li><a href="">白内障专家</a></li>
+									<li><a href="">小儿眼病专家</a></li>
+									<li><a href="">验光配镜专家</a></li>
+									<li><a href="">斜弱视专家</a></li>
+									<li><a href="">眼底病专家</a></li>
+									<li><a href="">角膜病专家</a></li>
+									<li><a href="">青光眼专家</a></li>
+									<li><a href="">综合眼病专家</a></li>
+								</ul>
+							</div>
+							<div class="m-right">
+								<div class="m-r-detail">
+									<a href=""><img src="images/menu_gyae01.jpg" alt="成都东区爱尔眼科医院"></a>
+									<div class="t"><a href="">成都东区爱尔眼科医院</a></div>
+									<p><a href="">爱尔眼科医院集团是中国规模最大的眼科连锁机构，中国第一家IPO上市的医疗机构，是国内首家…</a></p>
+								</div>
+								<div class="m-r-detail">
+									<a href=""><img src="images/menu_gyae02.jpg" alt="爱心助力人类眼健康事业"></a>
+									<div class="t"><a href="">爱心助力人类眼健康事业</a></div>
+									<p><a href="">我们创新医疗服务模式，持续开发和满足患者的需求，使所有的人，无论贫富贵贱，都能够享受到眼健康的权利。</a></p>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="li-first">
+						<a href="" >诊疗设备</a>
+						<div class="menu-equipment menu-hover-show">
+							<div class="m-left">
+								<ul class="m-ul">
+									<li><a href="">全新飞秒激光设备</a></li>
+									<li><a href="">爱尔名医</a></li>
+									<li><a href="">社会责任</a></li>
+									<li><a href="">诊疗设备</a></li>
+									<li><a href="">诊疗设备</a></li>
+								</ul>
+							</div>
+							<div class="m-right">
+								<div class="m-r-detail">
+									<a href=""><img src="images/menu_gyae01.jpg" alt="成都东区爱尔眼科医院"></a>
+									<div class="t"><a href="">成都东区爱尔眼科医院</a></div>
+									<p><a href="">爱尔眼科医院集团是中国规模最大的眼科连锁机构，中国第一家IPO上市的医疗机构，是国内首家…</a></p>
+								</div>
+								<div class="m-r-detail">
+									<a href=""><img src="images/menu_gyae02.jpg" alt="爱心助力人类眼健康事业"></a>
+									<div class="t"><a href="">爱心助力人类眼健康事业</a></div>
+									<p><a href="">我们创新医疗服务模式，持续开发和满足患者的需求，使所有的人，无论贫富贵贱，都能够享受到眼健康的权利。</a></p>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="li-first">
+						<a href="" >就诊服务</a>
+						<div class="menu-service menu-hover-show">
+							<div class="m-left">
+								<ul class="m-ul">
+									<li><a href="">就诊服务</a></li>
+									<li><a href="">爱尔名医</a></li>
+									<li><a href="">社会责任</a></li>
+									<li><a href="">诊疗设备</a></li>
+									<li><a href="">诊疗设备</a></li>
+								</ul>
+							</div>
+							<div class="m-right">
+								<div class="m-r-detail">
+									<a href=""><img src="images/menu_gyae01.jpg" alt="成都东区爱尔眼科医院"></a>
+									<div class="t"><a href="">成都东区爱尔眼科医院</a></div>
+									<p><a href="">爱尔眼科医院集团是中国规模最大的眼科连锁机构，中国第一家IPO上市的医疗机构，是国内首家…</a></p>
+								</div>
+								<div class="m-r-detail">
+									<a href=""><img src="images/menu_gyae02.jpg" alt="爱心助力人类眼健康事业"></a>
+									<div class="t"><a href="">爱心助力人类眼健康事业</a></div>
+									<p><a href="">我们创新医疗服务模式，持续开发和满足患者的需求，使所有的人，无论贫富贵贱，都能够享受到眼健康的权利。</a></p>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="li-first">
+						<a href="" >会员中心</a>
+						<div class="menu-member menu-hover-show">
+							<div class="m-left">
+								<ul class="m-ul">
+									<li><a href="">会员中心</a></li>
+									<li><a href="">爱尔名医</a></li>
+									<li><a href="">社会责任</a></li>
+									<li><a href="">诊疗设备</a></li>
+									<li><a href="">诊疗设备</a></li>
+								</ul>
+							</div>
+							<div class="m-right">
+								<div class="m-r-detail">
+									<a href=""><img src="images/menu_gyae01.jpg" alt="成都东区爱尔眼科医院"></a>
+									<div class="t"><a href="">成都东区爱尔眼科医院</a></div>
+									<p><a href="">爱尔眼科医院集团是中国规模最大的眼科连锁机构，中国第一家IPO上市的医疗机构，是国内首家…</a></p>
+								</div>
+								<div class="m-r-detail">
+									<a href=""><img src="images/menu_gyae02.jpg" alt="爱心助力人类眼健康事业"></a>
+									<div class="t"><a href="">爱心助力人类眼健康事业</a></div>
+									<p><a href="">我们创新医疗服务模式，持续开发和满足患者的需求，使所有的人，无论贫富贵贱，都能够享受到眼健康的权利。</a></p>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="li-first"><a href="" >预约挂号</a></li>
+				</ul>
+				<script type="text/javascript">
+					$(".li-first").mouseover(function(){
+						$(this).find(".menu-hover-show").fadeIn('fast');
+					});
+					$(".li-first").mouseleave(function(){
+						$(this).find(".menu-hover-show").fadeOut('fast');
+					});
+				</script>
+			</div>
 
             <div class="drop-down">
                 <span class="ico"></span>
@@ -70,8 +222,13 @@
             		<ul>
             			<a href="a"><li>近视手术</li></a>
             			<a href="b"><li>白内障</li></a>
-            			<a href="c"><li>青光眼</li></a>
-            			<a href="d"><li>眼睛手术</li></a>
+            			<a href="c"><li>小儿眼病</li></a>
+            			<a href="d"><li>验光配镜</li></a>
+            			<a href="d"><li>斜弱视</li></a>
+            			<a href="d"><li>眼底病</li></a>
+            			<a href="d"><li>角膜病</li></a>
+            			<a href="d"><li>青光眼</li></a>
+            			<a href="d"><li>综合眼病</li></a>
             		</ul>
             	</div>
             </div>
@@ -190,15 +347,15 @@
 					<div class="img-box">
 						<img src="images/info_02.png" alt="医学院背景" />
 					</div>
-					<p class="p1">医学院背景</p>
-					<p>成都医学院校院结合模式</p>
+					<p class="p1">一城三院</p>
+					<p>成都爱尔/东区爱尔/康桥</p>
 				</div>
 				<div class="info-box">
 					<div class="img-box">
 						<img src="images/info_03.png" alt="18年历史" />
 					</div>
-					<p class="p1">18年历史</p>
-					<p>累计服务百万患者</p>
+					<p class="p1">专业眼科</p>
+					<p>中国大型连锁眼科医院集团</p>
 				</div>
 				<div class="info-box">
 					<div class="img-box">
@@ -230,10 +387,10 @@
 				</div>
 				<div class="info-box">
 					<div class="img-box">
-						<img src="images/info_07.png" alt="公益慈善" />
+						<img src="images/info_08.png" alt="公益慈善" />
 					</div>
-					<p class="p1">公益慈善</p>
-					<p>西部光明行/眼库/县域防盲</p>
+					<p class="p1">爱尔眼库</p>
+					<p>传递爱心 延续光明</p>
 				</div>
 			</div>
 
@@ -263,7 +420,7 @@
 			    	    </div></a>
 			    	    <a href=""><div class="intro intro4">
 			    	    	<span class="img img4"></span>
-			    	    	<p>就医流程</p>
+			    	    	<p>医院地址</p>
 			    	    </div></a>
 			    		
 			    	</div>
@@ -359,48 +516,48 @@
 				<div class="clinic-catalog">
 					<div class="cli-high">
 						<img src="images/clinic-ico1.png" width="110" height="53">
-						<p>白内障手术</p>
-						<!--<span></span> &lt;!&ndash;右上角hot图标&ndash;&gt;-->
+						<p>近视手术</p>
+						<span></span> <!--右上角hot图标-->
 					</div>
 					<div class="cli-high">
 						<img src="images/clinic-ico2.png" width="110" height="53">
-						<p>斜弱视及小儿</p>
-						<span></span>
+						<p>白内障</p>
+						<!--<span></span>-->
 					</div>
 					<div class="cli-high">
 						<img src="images/clinic-ico3.png" width="110" height="53">
-						<p>近视手术</p>
-						<span></span>
+						<p>小儿眼病</p>
+						<!--<span></span>-->
 					</div>
 					<div class="cli-high">
 						<img src="images/clinic-ico4.png" width="110" height="53">
-						<p>眼底病</p>
-						<span></span>
+						<p>验光配镜</p>
+						<!--<span></span>-->
 					</div>
 					<div class="cli-high">
 						<img src="images/clinic-ico5.png" width="110" height="53">
-						<p>视光</p>
-						<span></span>
+						<p>眼底病</p>
+						<!--<span></span>-->
 					</div>
 					<div class="cli-high">
 						<img src="images/clinic-ico6.png" width="110" height="53">
 						<p>青光眼</p>
-						<span></span>
+						<!--<span></span>-->
 					</div>
 					<div class="cli-high">
 						<img src="images/clinic-ico7.png" width="110" height="53">
-						<p>眼底病</p>
-						<span></span>
+						<p>眼外伤</p>
+						<!--<span></span>-->
 					</div>
 					<div class="cli-high">
 						<img src="images/clinic-ico8.png" width="110" height="53">
-						<p>眼底病</p>
-						<span></span>
+						<p>泪道病</p>
+						<!--<span></span>-->
 					</div>
 					<div class="cli-high">
 						<img src="images/clinic-ico9.png" width="110" height="53">
-						<p>泪道病</p>
-						<span></span>
+						<p>综合眼病</p>
+						<!--<span></span>-->
 					</div>
 				</div>
 
@@ -429,8 +586,8 @@
 						<div class="cli-con-left"><img src="images/cli-con-img.png" width="400" height="400"></div>
 						<div class="cli-con-right">
 							<div class="right-box">
-								<p class="c-t">斜弱视及小儿</p>
-								<p class="c-c">斜弱视及小儿专科是爱尔眼科重点高新技术项目，2005年，率先在中国引进飞秒激光技术并成功实施国内第一例飞秒手术。迄今为止，近视手术专科已成功开展近视手术120余万例。</p>
+								<p class="c-t">白内障</p>
+								<p class="c-c">白内障专科是爱尔眼科重点高新技术项目，2005年，率先在中国引进飞秒激光技术并成功实施国内第一例飞秒手术。迄今为止，近视手术专科已成功开展近视手术120余万例。</p>
 								<p class="c-n first"><span></span>[治疗]&nbsp;&nbsp;<a href="">近视的治疗方法有哪些</a></p>
 								<p class="c-n"><span></span>[最新活动]&nbsp;&nbsp;<a href="">名医集结衣冠庙 我正在抢红包</a></p>
 								<p class="c-n"><span></span>[行业动态]&nbsp;&nbsp;<a href="">2050高度近视将达到9亿 如何</a></p>
@@ -449,8 +606,8 @@
 						<div class="cli-con-left"><img src="images/cli-con-img.png" width="400" height="400"></div>
 						<div class="cli-con-right">
 							<div class="right-box">
-								<p class="c-t">近视手术</p>
-								<p class="c-c">近视手术专科是爱尔眼科重点高新技术项目，2005年，率先在中国引进飞秒激光技术并成功实施国内第一例飞秒手术。迄今为止，近视手术专科已成功开展近视手术120余万例。</p>
+								<p class="c-t">小儿眼病</p>
+								<p class="c-c">小儿眼病专科是爱尔眼科重点高新技术项目，2005年，率先在中国引进飞秒激光技术并成功实施国内第一例飞秒手术。迄今为止，近视手术专科已成功开展近视手术120余万例。</p>
 								<p class="c-n first"><span></span>[治疗]&nbsp;&nbsp;<a href="">近视的治疗方法有哪些</a></p>
 								<p class="c-n"><span></span>[最新活动]&nbsp;&nbsp;<a href="">名医集结衣冠庙 我正在抢红包</a></p>
 								<p class="c-n"><span></span>[行业动态]&nbsp;&nbsp;<a href="">2050高度近视将达到9亿 如何</a></p>
@@ -469,8 +626,8 @@
 						<div class="cli-con-left"><img src="images/cli-con-img.png" width="400" height="400"></div>
 						<div class="cli-con-right">
 							<div class="right-box">
-								<p class="c-t">屈光手术</p>
-								<p class="c-c">屈光手术专科是爱尔眼科重点高新技术项目，2005年，率先在中国引进飞秒激光技术并成功实施国内第一例飞秒手术。迄今为止，近视手术专科已成功开展近视手术120余万例。</p>
+								<p class="c-t">验光配镜</p>
+								<p class="c-c">验光配镜专科是爱尔眼科重点高新技术项目，2005年，率先在中国引进飞秒激光技术并成功实施国内第一例飞秒手术。迄今为止，近视手术专科已成功开展近视手术120余万例。</p>
 								<p class="c-n first"><span></span>[治疗]&nbsp;&nbsp;<a href="">近视的治疗方法有哪些</a></p>
 								<p class="c-n"><span></span>[最新活动]&nbsp;&nbsp;<a href="">名医集结衣冠庙 我正在抢红包</a></p>
 								<p class="c-n"><span></span>[行业动态]&nbsp;&nbsp;<a href="">2050高度近视将达到9亿 如何</a></p>
@@ -489,8 +646,8 @@
 						<div class="cli-con-left"><img src="images/cli-con-img.png" width="400" height="400"></div>
 						<div class="cli-con-right">
 							<div class="right-box">
-								<p class="c-t">视光科</p>
-								<p class="c-c">视光科是爱尔眼科重点高新技术项目，2005年，率先在中国引进飞秒激光技术并成功实施国内第一例飞秒手术。迄今为止，近视手术专科已成功开展近视手术120余万例。</p>
+								<p class="c-t">眼底病</p>
+								<p class="c-c">眼底病是爱尔眼科重点高新技术项目，2005年，率先在中国引进飞秒激光技术并成功实施国内第一例飞秒手术。迄今为止，近视手术专科已成功开展近视手术120余万例。</p>
 								<p class="c-n first"><span></span>[治疗]&nbsp;&nbsp;<a href="">近视的治疗方法有哪些</a></p>
 								<p class="c-n"><span></span>[最新活动]&nbsp;&nbsp;<a href="">名医集结衣冠庙 我正在抢红包</a></p>
 								<p class="c-n"><span></span>[行业动态]&nbsp;&nbsp;<a href="">2050高度近视将达到9亿 如何</a></p>
@@ -529,28 +686,8 @@
 						<div class="cli-con-left"><img src="images/cli-con-img.png" width="400" height="400"></div>
 						<div class="cli-con-right">
 							<div class="right-box">
-								<p class="c-t">眼底病</p>
-								<p class="c-c">眼底病专科是爱尔眼科重点高新技术项目，2005年，率先在中国引进飞秒激光技术并成功实施国内第一例飞秒手术。迄今为止，近视手术专科已成功开展近视手术120余万例。</p>
-								<p class="c-n first"><span></span>[治疗]&nbsp;&nbsp;<a href="">近视的治疗方法有哪些</a></p>
-								<p class="c-n"><span></span>[最新活动]&nbsp;&nbsp;<a href="">名医集结衣冠庙 我正在抢红包</a></p>
-								<p class="c-n"><span></span>[行业动态]&nbsp;&nbsp;<a href="">2050高度近视将达到9亿 如何</a></p>
-								<p class="c-n"><span></span>[治疗]&nbsp;&nbsp;<a href="">近视的治疗方法有哪些</a></p>
-								<div class="c-bottom">
-									<a href=""><div class="sp1">诊疗设备</div></a>
-									<a href=""><div class="sp1">专家团队</div></a>
-									<a href=""><div class="sp1">先进技术</div></a>
-									<a href=""><div class="sp1">个性服务</div></a>
-
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="cli-content">
-						<div class="cli-con-left"><img src="images/cli-con-img.png" width="400" height="400"></div>
-						<div class="cli-con-right">
-							<div class="right-box">
-								<p class="c-t">东区医院</p>
-								<p class="c-c">白内障手术专科是爱尔眼科重点高新技术项目，2005年，率先在中国引进飞秒激光技术并成功实施国内第一例飞秒手术。迄今为止，近视手术专科已成功开展近视手术120余万例。</p>
+								<p class="c-t">眼外伤</p>
+								<p class="c-c">眼外伤专科是爱尔眼科重点高新技术项目，2005年，率先在中国引进飞秒激光技术并成功实施国内第一例飞秒手术。迄今为止，近视手术专科已成功开展近视手术120余万例。</p>
 								<p class="c-n first"><span></span>[治疗]&nbsp;&nbsp;<a href="">近视的治疗方法有哪些</a></p>
 								<p class="c-n"><span></span>[最新活动]&nbsp;&nbsp;<a href="">名医集结衣冠庙 我正在抢红包</a></p>
 								<p class="c-n"><span></span>[行业动态]&nbsp;&nbsp;<a href="">2050高度近视将达到9亿 如何</a></p>
@@ -571,6 +708,26 @@
 							<div class="right-box">
 								<p class="c-t">泪道病</p>
 								<p class="c-c">泪道病专科是爱尔眼科重点高新技术项目，2005年，率先在中国引进飞秒激光技术并成功实施国内第一例飞秒手术。迄今为止，近视手术专科已成功开展近视手术120余万例。</p>
+								<p class="c-n first"><span></span>[治疗]&nbsp;&nbsp;<a href="">近视的治疗方法有哪些</a></p>
+								<p class="c-n"><span></span>[最新活动]&nbsp;&nbsp;<a href="">名医集结衣冠庙 我正在抢红包</a></p>
+								<p class="c-n"><span></span>[行业动态]&nbsp;&nbsp;<a href="">2050高度近视将达到9亿 如何</a></p>
+								<p class="c-n"><span></span>[治疗]&nbsp;&nbsp;<a href="">近视的治疗方法有哪些</a></p>
+								<div class="c-bottom">
+									<a href=""><div class="sp1">诊疗设备</div></a>
+									<a href=""><div class="sp1">专家团队</div></a>
+									<a href=""><div class="sp1">先进技术</div></a>
+									<a href=""><div class="sp1">个性服务</div></a>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cli-content">
+						<div class="cli-con-left"><img src="images/cli-con-img.png" width="400" height="400"></div>
+						<div class="cli-con-right">
+							<div class="right-box">
+								<p class="c-t">综合眼病</p>
+								<p class="c-c">综合眼病专科是爱尔眼科重点高新技术项目，2005年，率先在中国引进飞秒激光技术并成功实施国内第一例飞秒手术。迄今为止，近视手术专科已成功开展近视手术120余万例。</p>
 								<p class="c-n first"><span></span>[治疗]&nbsp;&nbsp;<a href="">近视的治疗方法有哪些</a></p>
 								<p class="c-n"><span></span>[最新活动]&nbsp;&nbsp;<a href="">名医集结衣冠庙 我正在抢红包</a></p>
 								<p class="c-n"><span></span>[行业动态]&nbsp;&nbsp;<a href="">2050高度近视将达到9亿 如何</a></p>
@@ -608,59 +765,112 @@
 
 	<!--专家团队--开始-->
 	<div class="expert-team">
-		<div class="w1000 center">
+		<div class="w1100 center">
 			<div class="expert-title">
 				<p class="p1">专家团队</p>
 				<p class="p2">EXPERT TEAM</p>
 			</div>
 			<!--专家介绍-->
 			<div class="expert-description">
-				<div class="expert-content">
-					<img src="images/expert_01.png" >
-					<p class="p-t"><span>周进</span>&nbsp;&nbsp;副主任医师</p>
-					<p class="p-h">爱尔眼科成都医院业务副院长</p>
-					<p class="p-d">擅长：在晶体植入矫正屈光不正手术、白内障方面有较深研究，2013年晶体植入手术量全球第一。</p>
-					<div class="p-sharp">
-						<a href="/wechat"><span class="wechat"></span></a>
-						<a href="/msg"><span class="msg"></span></a>
-						<a href="/xinxi"><span class="xinxi"></span></a>
-					</div>
-				</div>
-				<div class="expert-content">
-					<img src="images/expert_01.png" >
-					<p class="p-t"><span>周进</span>&nbsp;&nbsp;副主任医师</p>
-					<p class="p-h">爱尔眼科成都医院业务副院长</p>
-					<p class="p-d">擅长：在晶体植入矫正屈光不正手术、白内障方面有较深研究，2013年晶体植入手术量全球第一。</p>
-					<div class="p-sharp">
-						<a href="/wechat"><span class="wechat"></span></a>
-						<a href="/msg"><span class="msg"></span></a>
-						<a href="/xinxi"><span class="xinxi"></span></a>
-					</div>
-				</div>
-				<div class="expert-content">
-					<img src="images/expert_01.png" >
-					<p class="p-t"><span>周进</span>&nbsp;&nbsp;副主任医师</p>
-					<p class="p-h">爱尔眼科成都医院业务副院长</p>
-					<p class="p-d">擅长：在晶体植入矫正屈光不正手术、白内障方面有较深研究，2013年晶体植入手术量全球第一。</p>
-					<div class="p-sharp">
-						<a href="/wechat"><span class="wechat"></span></a>
-						<a href="/msg"><span class="msg"></span></a>
-						<a href="/xinxi"><span class="xinxi"></span></a>
-					</div>
-				</div>
-				<div class="expert-content">
-					<img src="images/expert_01.png" >
-					<p class="p-t"><span>周进</span>&nbsp;&nbsp;副主任医师</p>
-					<p class="p-h">爱尔眼科成都医院业务副院长</p>
-					<p class="p-d">擅长：在晶体植入矫正屈光不正手术、白内障方面有较深研究，2013年晶体植入手术量全球第一。</p>
-					<div class="p-sharp">
-						<a href="/wechat"><span class="wechat"></span></a>
-						<a href="/msg"><span class="msg"></span></a>
-						<a href="/xinxi"><span class="xinxi"></span></a>
-					</div>
-				</div>
-			</div>
+				<!--专家轮播-->
+				<div class="ed-scroll">
+					<div class="ed-scroll-left" id="ed-LeftArr"></div>
+					<div class="ed-pic" id="ed-scrollPic">
+						<ul>
+							<li>
+								<div class="expert-content">
+									<img src="images/expert_01.png" >
+									<p class="p-t"><span>周进</span>&nbsp;&nbsp;副主任医师</p>
+									<p class="p-h">爱尔眼科成都医院业务副院长</p>
+									<p class="p-d">擅长：在晶体植入矫正屈光不正手术、白内障方面有较深研究，2013年晶体植入手术量全球第一。</p>
+									<div class="p-sharp">
+										<a href="/wechat"><span class="wechat"></span></a>
+										<a href="/msg"><span class="msg"></span></a>
+										<a href="/xinxi"><span class="xinxi"></span></a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="expert-content">
+									<img src="images/expert_01.png" >
+									<p class="p-t"><span>周进</span>&nbsp;&nbsp;副主任医师</p>
+									<p class="p-h">爱尔眼科成都医院业务副院长</p>
+									<p class="p-d">擅长：在晶体植入矫正屈光不正手术、白内障方面有较深研究，2013年晶体植入手术量全球第一。</p>
+									<div class="p-sharp">
+										<a href="/wechat"><span class="wechat"></span></a>
+										<a href="/msg"><span class="msg"></span></a>
+										<a href="/xinxi"><span class="xinxi"></span></a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="expert-content">
+									<img src="images/expert_01.png" >
+									<p class="p-t"><span>周进</span>&nbsp;&nbsp;副主任医师</p>
+									<p class="p-h">爱尔眼科成都医院业务副院长</p>
+									<p class="p-d">擅长：在晶体植入矫正屈光不正手术、白内障方面有较深研究，2013年晶体植入手术量全球第一。</p>
+									<div class="p-sharp">
+										<a href="/wechat"><span class="wechat"></span></a>
+										<a href="/msg"><span class="msg"></span></a>
+										<a href="/xinxi"><span class="xinxi"></span></a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="expert-content">
+									<img src="images/expert_01.png" >
+									<p class="p-t"><span>周进</span>&nbsp;&nbsp;副主任医师</p>
+									<p class="p-h">爱尔眼科成都医院业务副院长</p>
+									<p class="p-d">擅长：在晶体植入矫正屈光不正手术、白内障方面有较深研究，2013年晶体植入手术量全球第一。</p>
+									<div class="p-sharp">
+										<a href="/wechat"><span class="wechat"></span></a>
+										<a href="/msg"><span class="msg"></span></a>
+										<a href="/xinxi"><span class="xinxi"></span></a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="expert-content">
+									<img src="images/expert_01.png" >
+									<p class="p-t"><span>周进</span>&nbsp;&nbsp;副主任医师</p>
+									<p class="p-h">爱尔眼科成都医院业务副院长</p>
+									<p class="p-d">擅长：在晶体植入矫正屈光不正手术、白内障方面有较深研究，2013年晶体植入手术量全球第一。</p>
+									<div class="p-sharp">
+										<a href="/wechat"><span class="wechat"></span></a>
+										<a href="/msg"><span class="msg"></span></a>
+										<a href="/xinxi"><span class="xinxi"></span></a>
+									</div>
+								</div>
+							</li>
 
+						</ul>
+					</div>
+					<div class="ed-scroll-right" id="ed-RightArr"></div>
+				</div>
+				<script src="js/scrollPic.js"></script>
+				<script>
+					window.onload = function(){
+						scrollPic();
+					}
+					function scrollPic() {
+						var scrollPic = new ScrollPic();
+						scrollPic.scrollContId   = "ed-scrollPic"; //内容容器ID
+						scrollPic.arrLeftId      = "ed-LeftArr";//左箭头ID
+						scrollPic.arrRightId     = "ed-RightArr"; //右箭头ID
+
+						scrollPic.frameWidth     = 1000;//显示框宽度
+						scrollPic.pageWidth      = 250; //翻页宽度
+
+						scrollPic.speed          = 5; //移动速度(单位毫秒，越小越快)
+						scrollPic.space          = 5; //每次移动像素(单位px，越大越快)
+						scrollPic.autoPlay       = false; //自动播放
+						scrollPic.autoPlayTime   = 3; //自动播放间隔时间(秒)
+
+						scrollPic.initialize(); //初始化
+					}
+				</script>
+
+			</div>
 		</div>
 	</div>
 	<!--专家团队--结束-->
@@ -675,120 +885,137 @@
 
 			<div class="equipment-area">
 				<div class="equipment-left">
-
-					<div class="fullSlide">
-						<div class="bd">
-							<ul>
-								<li>
-									<div class="left-detail">
-										<img src="images/equipment_bg.png" alt="">
-										<div class="text-bg">
-											<p class="p-t">德国Visu Max全飞秒激光近视手术系统</p>
-											<p class="p-c">源于德国，基于飞秒再一次全面升级，拥有准分子、飞秒的所有优势，并实现"无刀、无瓣，一生轻松"，全飞秒以保障受术者一生安全为宗旨，更加适合军校、运动员、公务员等运动多高要求的群体。全飞秒技术在美国、德国、日本相继开展两年后。2014年德国蔡司Visu Max全飞秒激光进驻成都爱尔眼科医院。</p>
-											<a href="/detail"><span class="p-d">查看详情</span></a>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="left-detail">
-										<img src="images/equipment_bg.png" alt="">
-										<div class="text-bg">
-											<p class="p-t">香港全飞秒激光近视手术系统</p>
-											<p class="p-c">源于德国，基于飞秒再一次全面升级，拥有准分子、飞秒的所有优势，并实现"无刀、无瓣，一生轻松"，全飞秒以保障受术者一生安全为宗旨，更加适合军校、运动员、公务员等运动多高要求的群体。全飞秒技术在美国、德国、日本相继开展两年后。</p>
-											<a href="/detail"><span class="p-d">查看详情</span></a>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="left-detail">
-										<img src="images/equipment_bg.png" alt="">
-										<div class="text-bg">
-											<p class="p-t">中国全飞秒激光近视手术系统</p>
-											<p class="p-c">源于中国，基于飞秒再一次全面升级，拥有准分子、飞秒的所有优势，并实现"无刀、无瓣，一生轻松"，全飞秒以保障受术者一生安全为宗旨，更加适合军校、运动员、公务员等运动多高要求的群体。全飞秒技术在美国、德国、日本相继开展两年后。</p>
-											<a href="/detail"><span class="p-d">查看详情</span></a>
-										</div>
-									</div>
-								</li>
-							</ul>
+					<div class="left-detail">
+						<img src="images/equipment_bg.png" alt="">
+						<div class="text-bg">
+							<p class="p-t">中国全飞秒激光近视手术系统</p>
+							<p class="p-c">源于中国，基于飞秒再一次全面升级，拥有准分子、飞秒的所有优势，并实现"无刀、无瓣，一生轻松"，全飞秒以保障受术者一生安全为宗旨，更加适合军校、运动员、公务员等运动多高要求的群体。全飞秒技术在美国、德国、日本相继开展两年后。</p>
+							<a href="/detail"><span class="p-d">查看详情</span></a>
 						</div>
-						<div class="hd"><ul></ul></div>
-						<span class="prev"></span>
-						<span class="next"></span>
-					</div><!--fullSlide end-->
-					<script type="text/javascript">
-						var imgTotal = $(".equipment-left .fullSlide .bd ul li").length;
-						var hdWidth = imgTotal*20;
-						$(".equipment-left .fullSlide .hd").css("width",hdWidth+'px');
-
-						// 只有一张图片，不显示底部圆点和左右箭头
-						$(".equipment-left .fullSlide .prev").css("display","none");
-						$(".equipment-left .fullSlide .next").css("display","none");
-						if(imgTotal == 1){
-							$(".equipment-left .fullSlide .hd").css("display","none");
-						}
-
-						$(".equipment-left .fullSlide").slide({
-							titCell: ".hd ul",
-							mainCell: ".bd ul",
-							effect: "fold",
-							autoPlay: true,
-							autoPage: true,
-							trigger: "click",
-						});
-					</script>
-
-
-					<!--<div class="left-detail">-->
-						<!--<img src="images/equipment_bg.png" alt="">-->
-						<!--<div class="text-bg">-->
-							<!--<p class="p-t">德国Visu Max全飞秒激光近视手术系统</p>-->
-							<!--<p class="p-c">源于德国，基于飞秒再一次全面升级，拥有准分子、飞秒的所有优势，并实现"无刀、无瓣，一生轻松"，全飞秒以保障受术者一生安全为宗旨，更加适合军校、运动员、公务员等运动多高要求的群体。全飞秒技术在美国、德国、日本相继开展两年后。2014年德国蔡司Visu Max全飞秒激光进驻成都爱尔眼科医院。</p>-->
-							<!--<a href="/detail"><span class="p-d">查看详情</span></a>-->
-						<!--</div>-->
-					<!--</div>-->
+					</div>
+					<div class="left-detail">
+						<img src="images/equipment_bg.png" alt="">
+						<div class="text-bg">
+							<p class="p-t">英国全飞秒激光近视手术系统</p>
+							<p class="p-c">源于中国，基于飞秒再一次全面升级，拥有准分子、飞秒的所有优势，并实现"无刀、无瓣，一生轻松"，全飞秒以保障受术者一生安全为宗旨，更加适合军校、运动员、公务员等运动多高要求的群体。全飞秒技术在美国、德国、日本相继开展两年后。</p>
+							<a href="/detail"><span class="p-d">查看详情</span></a>
+						</div>
+					</div>
+					<div class="left-detail">
+						<img src="images/equipment_bg.png" alt="">
+						<div class="text-bg">
+							<p class="p-t">法国全飞秒激光近视手术系统</p>
+							<p class="p-c">源于中国，基于飞秒再一次全面升级，拥有准分子、飞秒的所有优势，并实现"无刀、无瓣，一生轻松"，全飞秒以保障受术者一生安全为宗旨，更加适合军校、运动员、公务员等运动多高要求的群体。全飞秒技术在美国、德国、日本相继开展两年后。</p>
+							<a href="/detail"><span class="p-d">查看详情</span></a>
+						</div>
+					</div>
+					<div class="left-detail">
+						<img src="images/equipment_bg.png" alt="">
+						<div class="text-bg">
+							<p class="p-t">德国全飞秒激光近视手术系统</p>
+							<p class="p-c">源于中国，基于飞秒再一次全面升级，拥有准分子、飞秒的所有优势，并实现"无刀、无瓣，一生轻松"，全飞秒以保障受术者一生安全为宗旨，更加适合军校、运动员、公务员等运动多高要求的群体。全飞秒技术在美国、德国、日本相继开展两年后。</p>
+							<a href="/detail"><span class="p-d">查看详情</span></a>
+						</div>
+					</div>
 				</div>
 
 				<div class="equipment-right">
-					<div class="right-detail">
-						<div class="right-img">
-							<img src="images/equip_right_01.png" alt="">
+					<div id="leftDir"></div>
+					<div id="scrollbox">
+						<div id="scrollpic">
+							<div class="right-detail">
+								<div class="right-img">
+									<img src="images/equip_right_01.png" alt="">
+								</div>
+								<div class="right-text">
+									<p class="r-t-t">中国Visu Max全飞秒激光 近视手术系统</p>
+									<p class="r-t-c">基于飞秒再一次全面升级，拥有准分子、飞秒的所有优势，并实现<a href="">[详细]</a></p>
+								</div>
+							</div>
+							<div class="right-detail">
+								<div class="right-img">
+									<img src="images/equip_right_02.png" alt="">
+								</div>
+								<div class="right-text">
+									<p class="r-t-t">英国Visu Max全飞秒激光 近视手术系统</p>
+									<p class="r-t-c">基于飞秒再一次全面升级，拥有准分子、飞秒的所有优势，并实现<a href="">[详细]</a></p>
+								</div>
+							</div>
+							<div class="right-detail">
+								<div class="right-img">
+									<img src="images/equip_right_03.png" alt="">
+								</div>
+								<div class="right-text">
+									<p class="r-t-t">法国Visu Max全飞秒激光 近视手术系统</p>
+									<p class="r-t-c">基于飞秒再一次全面升级，拥有准分子、飞秒的所有优势，并实现<a href="">[详细]</a></p>
+								</div>
+							</div>
+							<div class="right-detail">
+								<div class="right-img">
+									<img src="images/equip_right_03.png" alt="">
+								</div>
+								<div class="right-text">
+									<p class="r-t-t">德国Visu Max全飞秒激光 近视手术系统</p>
+									<p class="r-t-c">基于飞秒再一次全面升级，拥有准分子、飞秒的所有优势，并....<a href="">[详细]</a></p>
+								</div>
+							</div>
 						</div>
-						<div class="right-text">
-							<p class="r-t-t">德国Visu Max全飞秒激光 近视手术系统</p>
-							<p class="r-t-c">基于飞秒再一次全面升级，拥有准分子、飞秒的所有优势，并实现<a href="">[详细]</a></p>
-						</div>
+						<div id="scrollpic-copy"></div>
 					</div>
-					<div class="right-detail">
-						<div class="right-img">
-							<img src="images/equip_right_02.png" alt="">
-						</div>
-						<div class="right-text">
-							<p class="r-t-t">德国Visu Max全飞秒激光 近视手术系统</p>
-							<p class="r-t-c">基于飞秒再一次全面升级，拥有准分子、飞秒的所有优势，并实现<a href="">[详细]</a></p>
-						</div>
-					</div>
-					<div class="right-detail">
-						<div class="right-img">
-							<img src="images/equip_right_03.png" alt="">
-						</div>
-						<div class="right-text">
-							<p class="r-t-t">德国Visu Max全飞秒激光 近视手术系统</p>
-							<p class="r-t-c">基于飞秒再一次全面升级，拥有准分子、飞秒的所有优势，并实现<a href="">[详细]</a></p>
-						</div>
-					</div>
-					<div class="right-detail">
-						<div class="right-img">
-							<img src="images/equip_right_03.png" alt="">
-						</div>
-						<div class="right-text">
-							<p class="r-t-t">德国Visu Max全飞秒激光 近视手术系统</p>
-							<p class="r-t-c">基于飞秒再一次全面升级，拥有准分子、飞秒的所有优势，并....<a href="">[详细]</a></p>
-						</div>
-					</div>
+					<div id="rightDir"></div>
 
+					<script type="text/javascript">
+						//上下无缝滚动
+						var speed = 20;
+						var direction="top";
+						var tab = document.getElementById("scrollbox");
+						var tab1 = document.getElementById("scrollpic");
+						var tab2 = document.getElementById("scrollpic-copy");
+						var leftDir = document.getElementById("leftDir");
+						var rightDir = document.getElementById("rightDir");
+						tab2.innerHTML = tab1.innerHTML;
+						function marquee(){
+							switch(direction){
+								case "top":
+									if(tab2.offsetHeight - tab.scrollTop <= 0){
+										tab.scrollTop -= tab1.offsetHeight;
+									}else{
+										tab.scrollTop++;
+									}
+									break;
+								case "bottom":
+									if(tab.scrollTop <= 0){
+										tab.scrollTop += tab2.offsetHeight;
+									}else{
+										tab.scrollTop--;
+									}
+									break;
+							}
+						}
+
+						function changeDirection(dir){
+							direction = dir;
+						}
+						var timer = setInterval(marquee,speed);
+						tab.onmouseover = function(){clearInterval(timer);};
+						tab.onmouseout = function(){timer = setInterval(marquee,speed);};
+						leftDir.onclick = function(){changeDirection("top");};
+						rightDir.onclick = function(){changeDirection("bottom");};
+					</script>
+					<script type="text/javascript">
+						$(document).ready(function(){
+							$(".equipment-left .left-detail:eq(0)").css("display","block");
+							$(".equipment-left .left-detail:eq(0)").siblings().css("display","none");
+							$(".equipment-right .right-detail").hover(function(){
+								var index = $(this).index();
+								$(".equipment-left .left-detail:eq(" + index +")").fadeIn(0);
+								$(".equipment-left .left-detail:eq(" + index +")").siblings().fadeOut(0);
+							});
+						});
+					</script>
 				</div>
-			</div>
 
+			</div>
 		</div>
 	</div>
 	<!--诊疗设备--结束-->

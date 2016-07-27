@@ -1,4 +1,4 @@
-/*é¡¶éƒ¨å¤´ä¿¡æ¯--å¼€å§‹*/
+/*¶¥²¿Í·ĞÅÏ¢--¿ªÊ¼*/
 .header_top{
     height: 35px;
     line-height: 35px;
@@ -33,10 +33,10 @@
     font-size: 16px;
     font-weight: bold;
 }
-/*é¡¶éƒ¨å¤´ä¿¡æ¯--ç»“æŸ*/
+/*¶¥²¿Í·ĞÅÏ¢--½áÊø*/
 
 
-/*LOGOåŠå’¨è¯¢å¹³å°--å¼€å§‹*/
+/*LOGO¼°×ÉÑ¯Æ½Ì¨--¿ªÊ¼*/
 .header{
     background-color: #00489c;
     height: 100px;
@@ -58,7 +58,13 @@
     line-height: 60px;
     position: relative;
 }
-
+.header .sharf .consult .wechat-code{
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 140px;
+    z-index: 1000;
+}
 .header .sharf .consult span{
     color: #e1e6ee;
     font-size: 16px;
@@ -125,37 +131,40 @@
     border-radius: 10px;
     cursor: pointer;
 }
-/*LOGOåŠå’¨è¯¢å¹³å°--ç»“æŸ*/
+/*LOGO¼°×ÉÑ¯Æ½Ì¨--½áÊø*/
 
-/*èœå•æ ç›®--å¼€å§‹*/
+/*²Ëµ¥À¸Ä¿--¿ªÊ¼*/
 .menu{
     height: 54px;
 }
 
-.menu .menu-title{
+.menu-nav{
+    position: relative;
+}
+.menu .menu-nav .menu-title{
     display: block;
     float: left;
     height: 50px;
-    line-height: 50px;
     text-align: center;
 }
 
-.menu .menu-title li{
+.menu .menu-nav .menu-title .li-first{
     display: block;
     float: left;
     width: 90px;
     margin-right: 20px;
     cursor: pointer;
+    line-height: 50px;
 }
 
-.menu .menu-title li a{
+.menu .menu-nav .menu-title .li-first>a{
     color: #024aa7;
     font-size: 17px;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
-.menu .menu-title li:hover,.menu .menu-title li:active{
+.menu .menu-nav .menu-title .li-first:hover,.menu .menu-nav .menu-title .li-first:active{
     border-bottom: 4px solid #024aa7;
 }
 
@@ -206,4 +215,69 @@
     background-color: white;
     color: #0386d6;
 }
-/*èœå•æ ç›®--ç»“æŸ*/
+/*²Ëµ¥À¸Ä¿--½áÊø*/
+
+
+
+
+/*Òş²ØµÄ²Ëµ¥-CSS-¿ªÊ¼*/
+.menu-hover-show{
+    display: none;
+    padding: 5px;
+    position: absolute;
+    top: 54px;
+    left: 120px;
+    z-index: 1000;
+    background: #ededed;
+}
+.menu-hover-show .m-left{
+    width: 200px;
+    text-align: left;
+    float: left;
+}
+
+.menu-hover-show .m-left .m-ul{
+    padding: 20px;
+}
+.menu-hover-show .m-left .m-ul li{
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+    font-weight: bold;
+}
+.menu-hover-show .m-left .m-ul li a:hover{
+    color: #0082d1;
+}
+
+.menu-hover-show .m-right{
+    float: right;
+    width:460px;
+    background-color: #fff;
+    padding: 30px 20px;
+    text-align: left;
+}
+.menu-hover-show .m-right .m-r-detail{
+    float: left;
+    width: 44%;
+    margin-left: 3%;
+    margin-right: 3%;
+    line-height: 20px;
+}
+.menu-hover-show .m-right .m-r-detail .t{
+    font-size: 14px;
+    color: #333;
+    margin-top: .5em;
+    font-weight: bold;
+}
+
+.menu-hover-show .m-right .m-r-detail p{
+    margin-top: .4em;
+    font-size: 13px;
+}
+.menu-hover-show .m-right .m-r-detail p a:hover{
+    color: #0082d1;
+}
+.menu-hover-show .m-right .m-r-detail img{width:100%;}
+/*Òş²ØµÄ²Ëµ¥-CSS-½áÊø*/
